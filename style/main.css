@@ -1,0 +1,140 @@
+
+body {
+    margin: 0;
+}
+
+.main-mid {
+    display: grid;
+    grid-template-columns:  8% auto 8%;
+    grid-gap: 1rem;
+    height: 100vh;
+}
+
+@media (min-width: 900px) {
+    .main-mid {
+        grid-template-columns: 5% auto 5%;
+    }
+}
+
+.nav {
+    margin-top: 1em;
+    display: flex;
+}
+
+.patreon-icon img {
+    margin-left: 1em;
+    width:2em;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.patreon-icon img:hover {
+    transform: rotate(360deg);
+}
+
+.gh-icon img {
+    width:2em;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.gh-icon img:hover {
+    transform: rotate(360deg);
+}
+
+.title-container {
+    margin: 0 auto;
+    margin-top: 20%;
+    width: fit-content;
+}
+
+.logo {
+    display: flex;
+    width: fit-content;
+}
+
+.logo img {
+    width: 10rem;
+    height: 7rem;
+}
+
+.logo h1 {
+    margin-left: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 11rem;
+    font-size: 3rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.logo h1::after {
+    color: skyblue;
+    content: " AOYAGI";
+    transition: all 0.8s;
+}
+
+
+.logo h1:hover::after {
+    color: black;
+}
+
+.title {
+    font-size: 1.6rem;
+    font-family: 'Raleway', sans-serif;
+    width: fit-content;
+}
+
+.left-clip {
+    clip-path: polygon(0 0, 0% 100%, 80% 50%);
+    background-color: #2f97ff;
+    display: flex;
+    height: 100vh;
+    transition: 0.5s background-color;
+    cursor: pointer;
+}
+
+.left {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.right-clip {
+    clip-path: polygon(100% 0, 100% 100%, 20% 50%);
+    background-color: #2f97ff;
+    display: flex;
+    height: 100vh;
+    transition: 0.5s background-color;
+    cursor: pointer;
+}
+
+.right {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.about-label {
+    position: absolute;
+    transform: rotate(90deg);
+    left: -0.75em;
+}
+
+.page-label {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    font-weight: 900;
+    color: white;
+}
+
+.right-clip:hover {
+    background-color: #63b0fd;
+}
+
+.left-clip:hover {
+    background-color: #63b0fd;
+}
+
+.projects-label {
+    position: absolute;
+    transform: rotate(-90deg);
+    right: -1.5em;
+}

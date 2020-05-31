@@ -2,62 +2,42 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-/* The device with borders */
-.smartphone {
-  position: relative;
-  width: 360px;
-  height: 640px;
-  margin: auto;
-  border: 16px black solid;
-  border-top-width: 60px;
-  border-bottom-width: 60px;
-  border-radius: 36px;
-}
+<link rel="stylesheet" type="text/css" href="style/main.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet">
 
-/* The horizontal line on the top of the device */
-.smartphone:before {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 5px;
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #333;
-  border-radius: 10px;
-}
-
-/* The circle on the bottom of the device */
-.smartphone:after {
-  content: '';
-  display: block;
-  width: 35px;
-  height: 35px;
-  position: absolute;
-  left: 50%;
-  bottom: -65px;
-  transform: translate(-50%, -50%);
-  background: #333;
-  border-radius: 50%;
-}
-
-/* The screen (or content) of the device */
-.smartphone .content {
-  width: 360px;
-  height: 640px;
-  background: white;
-}
-</style>
 </head>
 <body>
-
-<div class="smartphone">
-  <div class="content">
-    <iframe src="https://prepa-quiz-preview.glitch.me/#/" style="width:100%;border:none;height:100%" />
-  </div>
-</div>
-
+    <div class="main-mid">
+        <div class="left-clip">
+            <div class="left">
+            <div class="about-label page-label">ABOUT</div>
+        </div>
+        </div>
+        <div class="center">
+          <div class="title-container">
+              <div class="logo">
+                <img src="assets/logo.png" alt="Logo">
+                <h1>Hugo</h1>
+           </div>
+           <div class="title">
+               Programming as a Hobby
+           </div>
+        <div class="nav">
+        <div class="gh-icon">
+            <img src="assets/github.png" alt="">
+        </div>
+        <div class="patreon-icon">
+            <img src="assets/patreon.svg" alt="">
+        </div>
+    </div>
+          </div>
+        
+        </div>
+        <div class="right-clip">
+            <div class="right">
+           <div class="projects-label page-label">PROJECTS</div>
+        </div>
+        </div>
+    </div>
 </body>
 </html>
