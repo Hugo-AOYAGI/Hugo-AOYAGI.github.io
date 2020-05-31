@@ -3,17 +3,9 @@ body {
     margin: 0;
 }
 
-.main-mid {
-    display: grid;
-    grid-template-columns:  8% auto 8%;
-    grid-gap: 1rem;
-    height: 100vh;
-}
-
-@media (min-width: 900px) {
-    .main-mid {
-        grid-template-columns: 5% auto 5%;
-    }
+.main {
+    height: 80vh;
+    margin: 0;
 }
 
 .nav {
@@ -44,7 +36,7 @@ body {
 
 .title-container {
     margin: 0 auto;
-    margin-top: 20%;
+    margin-top: 20vh;
     width: fit-content;
 }
 
@@ -54,8 +46,8 @@ body {
 }
 
 .logo img {
-    width: 10rem;
-    height: 7rem;
+    width: 14rem;
+    height: 9rem;
 }
 
 .logo h1 {
@@ -63,7 +55,7 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     width: 11rem;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -79,62 +71,24 @@ body {
 }
 
 .title {
+    margin-top: 1rem;
     font-size: 1.6rem;
     font-family: 'Raleway', sans-serif;
     width: fit-content;
+    transition: all 0.8s;
 }
 
-.left-clip {
-    clip-path: polygon(0 0, 0% 100%, 80% 50%);
-    background-color: #2f97ff;
-    display: flex;
-    height: 100vh;
-    transition: 0.5s background-color;
-    cursor: pointer;
-}
-
-.left {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.right-clip {
-    clip-path: polygon(100% 0, 100% 100%, 20% 50%);
-    background-color: #2f97ff;
-    display: flex;
-    height: 100vh;
-    transition: 0.5s background-color;
-    cursor: pointer;
-}
-
-.right {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.about-label {
+.paint-top {
     position: absolute;
-    transform: rotate(90deg);
-    left: -0.75em;
+    top: 88%;
+    margin: 0;
+    width: 100%;
 }
 
-.page-label {
-    font-family: 'Montserrat', sans-serif;
-    text-align: left;
-    font-weight: 900;
-    color: white;
-}
-
-.right-clip:hover {
-    background-color: #63b0fd;
-}
-
-.left-clip:hover {
-    background-color: #63b0fd;
-}
-
-.projects-label {
+.paint-bottom {
     position: absolute;
-    transform: rotate(-90deg);
-    right: -1.5em;
+    transform: rotate(180deg);
+    top: 199vh;
+    margin: 0;
+    width: 100%;
 }
