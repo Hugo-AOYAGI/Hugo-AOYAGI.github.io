@@ -1,7 +1,7 @@
 
 let error_bait = 0;
 
-let urls = ["../taupins", "./taupins", "./taupins", "./taupins", "./taupins", "./taupins"]
+let urls = ["../taupins", "../uimaker", "./taupins", "./taupins", "./taupins", "./taupins"]
 
 $(document).ready(function () {
     setInterval(addChangingTitle, 3000);
