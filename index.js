@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 
 
-var titles = ["Programming beginner", "Student in Classe Préparatoires", "Engineer Wannabe"];
+var titles = ["Programming beginner", "Student in Classe Preparatoire"];
 var i = 0;
 function addChangingTitle () {
     i++;

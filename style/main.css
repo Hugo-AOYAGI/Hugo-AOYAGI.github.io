@@ -92,3 +92,25 @@ body {
     margin: 0;
     width: 100%;
 }
+
+.checkout-btn {
+    margin-top: 4em;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    color: #0042ac;
+}
+
+.checkout-btn img {
+    margin-top: 0.5em;
+    cursor: pointer;
+    width: 3em;
+    transition: all 0.1s;
+}
+
+.checkout-btn img:hover {
+    margin-top: 0.6em;
+    width: 2.8em
+}
