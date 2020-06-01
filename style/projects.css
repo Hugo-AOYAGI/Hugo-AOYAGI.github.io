@@ -15,18 +15,19 @@
 
 .project-cards-container {
     display: flex;
-    overflow-x: hidden;
+    overflow-x: scroll;
+    overflow-y: hidden;
     height: 80%
 }
 
 .project-card {
     flex-shrink: 0;
-    padding: 1em;
+    padding: 2em;
     position: relative;
     background-color: white;
     border-radius: 0.6em;
-    width: 13em;
-    height: 80%;
+    width: 15em;
+    height: 70%;
     margin: 1em;
     margin-top: 3em;
     box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
@@ -40,6 +41,46 @@
 }
 
 .project-card h1 {
+    padding-top: 0;
     color: #1a1a9a;
-    font-size: 1.4em;
+    font-size: 1.6em;
+}
+
+.project-desc {
+    font-family: 'Raleway', sans-serif;
+}
+
+.project-langs span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+}
+
+.icons {
+    position: absolute;
+    top: 58%;
+    display: flex;
+}
+
+.icons img {
+    width: 2em;
+    margin-right: 0.5em;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.icons .tk {
+    width: 1em;
+}
+
+.icons .pygame {
+    width: 5em;
+}
+
+.project-card a img {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    width: 2em;
 }
