@@ -1,8 +1,18 @@
 
-let error_bait;
+let error_bait = 0;
+
+let urls = ["../taupins", "./taupins", "./taupins", "./taupins", "./taupins", "./taupins"]
 
 $(document).ready(function () {
     setInterval(addChangingTitle, 3000);
+    var j = 0;
+    for (let card of $(".project-card")) {
+        $(card).on("click", function () {
+           window.location = urls[j];     
+        });
+        j++;
+    }
+    
 });
 
 
@@ -16,3 +26,4 @@ function addChangingTitle () {
         $(".title").css("opacity", 1);
     }, 800);
 } 
+
