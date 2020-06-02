@@ -1,0 +1,12 @@
+body {
+    background: #38b6ff;
+    margin: 0;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
