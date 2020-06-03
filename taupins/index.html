@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Les Taupins</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../style/project_pages/main.css">
 </head>
 <body>
-    <img src="../assets/banners/taupins.png" alt="">
+    <img class="cover" src="../assets/banners/taupins.png" alt="">
+    <div class="nav">
+        <span>Description</span>
+        <span>How it's made</span>
+        <span>Try it</span>
+    </div>
+    <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+    </div>
+    <div class="main">
+        <h1>Description</h1>
+    </div>
+    
+        <script>
+        window.onscroll = function() {scrollHandle()};
+
+        function scrollHandle() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+          document.getElementById("progress").style.width = scrolled + "%";
+        }
+    </script>
 </body>
 </html>

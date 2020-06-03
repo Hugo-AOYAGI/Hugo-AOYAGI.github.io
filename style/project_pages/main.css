@@ -2,6 +2,62 @@ body {
     margin: 0;
 }
 
-img {
+.cover {
     width: 100%;
+}
+
+.nav {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    margin-top: -0.3em;
+    width: 100%;
+    display: flex;
+    background-color: #6eabff;
+}
+
+.nav span {
+    margin: 0.25em;
+    flex: 1;
+    text-align: center;
+    padding: 0.5em;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    border-right: 1px solid #a2c9ff;
+    color: white;
+    cursor: pointer;
+}
+
+.nav span:hover {
+    font-weight: 600;
+}
+
+.nav span:nth-last-of-type(1) {
+    border-right: none;
+}
+
+.progress-bar {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 2.7em;
+    width: 100%;
+    height: 0.3em;
+    background-color: #d8e8ff;
+}
+
+.progress {
+    border-bottom-right-radius: 0.2em;
+    border-top-right-radius: 0.2em;
+    width: 0%;
+    background-color: #6896e0;
+    transition: all 0.3s;
+    height: 0.3em;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6em;
+    padding-left: 1em;
+    color: #00007b;
+    height: 200vh;
 }
