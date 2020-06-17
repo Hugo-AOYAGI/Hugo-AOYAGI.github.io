@@ -39,17 +39,28 @@
         </div>
         <h1>How it's Made</h1>-->
         <h1>Try It</h1>
-        <iframe id="iframe"
+        <div class="smartphone">
+            <iframe id="iframe"
             title="App Preview"
-            width="300"
-            height="550"
+            width="295"
+            height="585"
             src="https://quiz-app-preview.glitch.me/">
         </iframe>
+        <img src="../assets/frame.png" alt="" id="phone-frame">
+        <p id="phone-time">17:20</p>
+        </div>
+        
         <button onclick="reloadFrame()">
             Reload
         </button>
     </div>
-    
+        <script>
+            setInterval(function () {
+                var now = new Date();
+                var datestr = now.getHours().toString() + ":" + now.getMinutes().toString(); 
+                document.getElementById("phone-time").innerHTML = datestr;
+            }, 1000);
+    </script>
         <script>
         window.onscroll = function() {scrollHandle()};
 

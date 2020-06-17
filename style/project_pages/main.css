@@ -84,10 +84,38 @@ p {
     border: 2px solid #999994;
 }
 
+.smartphone {
+    z-index: -10;
+    position: relative;
+    width: fit-content;
+    margin-top: 1em;
+    margin-left: calc(50% - 150px);
+}
+
+#phone-frame {
+    width: 310px;
+    position: absolute;
+    pointer-events: none;
+}
+
 iframe {
+    position: absolute;
+    left: 0.5em;
+    top: 1em;
     border: none;
-    margintop: 1em;;
-    margin-left: calc(50% - 150px)
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+#phone-time {
+    pointer-events: none;
+    position: absolute;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    top: 2.3em;
+    left: -0.5em;
+    font-size: 0.6em;
+    font-weight: 900;
 }
 
 .screenshots {
