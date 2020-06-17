@@ -5,6 +5,13 @@
     <title>Les Taupins</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../style/project_pages/main.css">
+    <script>
+        function reloadFrame() {
+            console.log("reload frame ..");
+            var iframe = document.getElementById('iframe');
+            iframe.src = iframe.src;
+        }
+    </script>
 </head>
 <body>
     <img class="cover" src="../assets/banners/taupins.png" alt="">
@@ -38,6 +45,9 @@
             height="550"
             src="https://quiz-app-preview.glitch.me/">
         </iframe>
+        <button onclick="reloadFrame()">
+            Reload
+        </button>
     </div>
     
         <script>
