@@ -23,7 +23,7 @@ body {
     padding: 0.5em;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    border-right: 1px solid #a2c9ff;
+    border-right: 1px solid #a5cbff;
     color: white;
     cursor: pointer;
 }
@@ -58,6 +58,42 @@ h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 1.6em;
     padding-left: 1em;
+    margin-top: 2em;
     color: #00007b;
-    height: 200vh;
+    text-transform: uppercase;
 }
+
+p {
+    padding-left: 4em;
+    padding-right: 4em;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em;
+}
+
+.row-2 {
+/*    align-items: center;*/
+    display: flex;
+}
+
+.phone {
+    border-radius: 0.5em;
+    margin: 1em;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: auto;
+    border: 2px solid #999994;
+}
+
+iframe {
+    border: none;
+    margintop: 1em;;
+    margin-left: calc(50% - 150px)
+}
+
+.screenshots {
+    box-shadow: inset 0px 0px 4px 4px black;
+/*    flex-wrap: wrap;*/
+    display: flex;
+    overflow-x: scroll;
+}
+
