@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Les Taupins</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../style/project_pages/main.css">
     <script>
         var iframe;
@@ -16,104 +17,77 @@
         }
         
         function fullscreen() {
-            iframe = document.getElementById('iframe');
-            phone = document.getElementById('smartphone');
-            iframe.style.width = window.innerWidth.toString() + "px";
-            iframe.style.height = window.innerHeight.toString() + "px";
-            iframe.style.zIndex = "100";
-            iframe.style.left = "0";
-//            iframe.setAttribute("style", "style='position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;'")
-            phone.style.marginLeft = "0";
-            localStorage.setItem('flutter.sizeCoeff', JSON.stringify(1.5));
-            reloadFrame()
+            window.location = "./preview/index.html";
         }
     </script>
 </head>
 <body>
-    <img class="cover" src="../assets/banners/taupins.png" alt="">
-    <div class="nav">
-        <span>Description</span>
-        <span>How it's made</span>
-        <span>Try it</span>
-    </div>
-    <div class="progress-bar">
-        <div class="progress" id="progress"></div>
-    </div>
-    <div class="main">
-        <h1>Description</h1>
-           <div>
-                <p>This application was built to assist me and others in studying. It contains plenty of questions for many subjects and explanations to go with.</p>
-                <p>It follows the content of <b>PTSI</b> (a category of "classe préparatoire") but it can also be used by other students in the scientific field.</p>
-                <p>I write most of the questions but some come from my teachers of from the internet.<br> There are <b>MCQ</b> (Multiple choice questions), <b>"True or False"</b> questions, and <b>"flip cards"</b> as filling in a formula on your phone takes a lot of time and is not very productive. Thus, with a flip card you just try to think about the answer and flip the card when you are ready.</p>
-        </div>
-        <div class="screenshots carousel" id="carousel-1">
-            <img class="sc selected-img" src="assets/qcm2.jpg" alt="" width=200 id="c1-1">
-            <img class="sc" src="assets/tof.jpg" alt="" width=200 id="c1-2" >
-            <img class="sc" src="assets/ans.jpg" alt="" width=200 id="c1-3" >
-            <img class="sc" src="assets/cats.jpg" alt="" width=200 id="c1-4">
-            <img class="sc" src="assets/main_menu.jpg" alt="" width=200 id="c1-5">
-        </div>
-        <script>
-            var carousel_images = ["c1-1", "c1-2", "c1-3", "c1-4", "c1-5"];
-            
-            var selected_i = 0;
-            
-            setInterval(function () {
-                let element1 = document.getElementById(carousel_images[selected_i]);
-                element1.classList.remove("selected-img");
-                selected_i++;
-                if (selected_i == carousel_images.length ) {selected_i = 0;}
-                let element2 = document.getElementById(carousel_images[selected_i]);
-                element2.classList.add("selected-img");
-                
-                let container = document.getElementById("carousel-1");
-                container.style.marginLeft = (400 - selected_i*250).toString() + "px";
-                
-            }, 3000);
-            
-            
-        </script>
-        <h1>How it's Made</h1>
-        <div>
-            <p>This application was made using the google framework : <b>flutter</b>. It allows for quick and <b>cross-platform</b> delevopment. The preview down below is actually from the same source code as the android application, just build for web. </p>
-            <p>The questions are stored on an <b>express javascript application</b> with questions returned as a response to a <b>POST request</b>. Express apps can be deployed instantly with little knowledge of backend development.</p>
-            <p>Questions are created on a desktop app made with <b>electron</b> that basically turns latex code into images which are then compressed to take as little space as possible. In order to generate the images, the latex code is preview live thanks to <b>Mathjax</b>, once the question is done, the Mathjax container is turned into a canvas and the canvas data is the one that's actually sent to the server.</p>
-            <img src="../assets/ex_question_making_app.png" width=900 alt="">
-        </div>
-        <h1>Try It</h1>
+       <div class="part-1 section" style="background-image: url(../assets/backgrounds/taupins/1.png)">
+           <img id="img-1" src="assets/phone-1.png" alt="">
+           <div class="main-title">
+               LES TAUPINS
+           </div>
+           <div class="sub-title">
+               Une application de quiz pour tous les taupins en prépa scientifique.
+           </div>
+       </div>
+       <div class="part-2 section">
+           <div class="header-1">
+               UN APPRENTISSAGE EFFICACE
+           </div>
+           <div class="cols-2-container">
+               <div class="col-of-2">
+                   <div class="number-circle"><div class="num-wrapper">01</div></div>
+                   <div class="paragraph">Des questions courtes qui ne nécessitent aucun papier et crayon pour y répondre.</div>
+               </div>
+               <div class="col-of-2">
+                   <div class="number-circle"><div class="num-wrapper">02</div></div>
+                   <div class="paragraph">Une explication concise pour comprendre ses erreurs à la fin de chaque question.</div>
+               </div>
+           </div>
+       </div>
+       <div class="part-3 section" style="background-image: url(../assets/backgrounds/taupins/2.png)">
+          <div class="main-title-2">
+               Des centaines de question de cours variées
+           </div>
+           <div class="right-side-list">
+               <p>
+                   Les QCM pour s'évaluer sur des applications basiques de cours.
+               </p>
+               <p>
+                  Des Vrai ou Faux pour mieux assimiler le cours. 
+               </p>
+               <p>
+                   Et les Flip Cards pour vérifier son apprentissage du cours.   
+               </p>
+           </div>
+       </div>
+       <div class="part-4 section">
+          <div class="header-1">
+               Des fiches par matières
+           </div>
+       </div>
         <div class="smartphone" id="smartphone">
             <iframe id="iframe"
             title="App Preview"
             width="295"
             height="550"
             src="./preview/index.html">
-        </iframe>
-        <img src="../assets/frame.png" alt="" id="phone-frame">
-        <p id="phone-time">00:00</p>
-         <div class="phone-nav">
-            <img src="../assets/reload_icon.png" width=18 alt="" onclick="reloadFrame()">
-            <img src="../assets/fullscreen_icon.png" width=15 height=15 alt="" onclick="fullscreen()">
-            <img src="../assets/return_icon.png" width=12 height=15 alt="" >
-            
+            </iframe>
+            <img src="../assets/frame.png" alt="" id="phone-frame">
+            <p id="phone-time">00:00</p>
+             <div class="phone-nav">
+                <img src="../assets/reload_icon.png" width=18 alt="" onclick="reloadFrame()">
+                <img src="../assets/fullscreen_icon.png" width=15 height=15 alt="" onclick="fullscreen()">
+                <img src="../assets/return_icon.png" width=12 height=15 alt="" >
+            </div>
         </div>
-        </div>
-    </div>
         <script>
             setInterval(function () {
                 var now = new Date();
                 var datestr = now.getHours().toString() + ":" + (now.getMinutes() < 10 ? "0" + now.getMinutes().toString() : now.getMinutes().toString()); 
                 document.getElementById("phone-time").innerHTML = datestr;
             }, 1000);
-    </script>
-        <script>
-        window.onscroll = function() {scrollHandle()};
-
-        function scrollHandle() {
-          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          var scrolled = (winScroll / height) * 100;
-          document.getElementById("progress").style.width = scrolled + "%";
-        }
     </script>
 </body>
 </html>
