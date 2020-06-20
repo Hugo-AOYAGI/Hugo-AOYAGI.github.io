@@ -6,10 +6,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../style/project_pages/main.css">
     <script>
+        var iframe;
+        var phone;
+        
         function reloadFrame() {
             console.log("reload frame ..");
-            var iframe = document.getElementById('iframe');
+            iframe = document.getElementById('iframe');
             iframe.src = iframe.src;
+        }
+        
+        function fullscreen() {
+            iframe = document.getElementById('iframe');
+            phone = document.getElementById('smartphone');
+            iframe.style.width = window.innerWidth.toString() + "px";
+            iframe.style.height = window.innerHeight.toString() + "px";
+            iframe.style.zIndex = "100";
+            iframe.style.left = "0";
+//            iframe.setAttribute("style", "style='position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;'")
+            phone.style.marginLeft = "0";
+            localStorage.setItem('flutter.sizeCoeff', JSON.stringify(1.5));
+            reloadFrame()
         }
     </script>
 </head>
@@ -27,8 +43,8 @@
         <h1>Description</h1>
            <div>
                 <p>This application was built to assist me and others in studying. It contains plenty of questions for many subjects and explanations to go with.</p>
-                <p>It follows the content of PTSI (a category of "classe préparatoire") but it can also be used by other students in the scientific field.</p>
-                <p>Many questions are taken from my teachers, some from the internet, and other I wrote myself. They are usually very short and do not require to write anything down on a paper. Most of those questions only help you to learn lessons and definitions, they do not provide any help for tests and exercises. <br> Some of those are MCQ (Multiple choice questions), some are "True or False" questions, and many are "flip cards" as filling in a formula on your phone takes a lot of time and is not very productive. Thus, with flip card you just try to think about the answer and flip the card when you are ready.</p>
+                <p>It follows the content of <b>PTSI</b> (a category of "classe préparatoire") but it can also be used by other students in the scientific field.</p>
+                <p>I write most of the questions but some come from my teachers of from the internet.<br> There are <b>MCQ</b> (Multiple choice questions), <b>"True or False"</b> questions, and <b>"flip cards"</b> as filling in a formula on your phone takes a lot of time and is not very productive. Thus, with a flip card you just try to think about the answer and flip the card when you are ready.</p>
         </div>
         <div class="screenshots carousel" id="carousel-1">
             <img class="sc selected-img" src="assets/qcm2.jpg" alt="" width=200 id="c1-1">
@@ -59,26 +75,28 @@
         </script>
         <h1>How it's Made</h1>
         <div>
-            <p>This application was made using the google framework : flutter. It allows for quick and cross platform-delevopment. The preview down below is actually from the same source code as the android application, just build for web. </p>
-            <p>The questions are stored on an express javascript application with questions returned as a response to a POST request. Express apps can be deployed instantly with little knowledge of backend development.</p>
-            <p>Questions are created on a desktop app made with electron that basically turns latex code into images which are then compressed to take as little space as possible. In order to generate the images, the latex code is preview live thanks to Mathjax, once the question is done, the Mathjax container is turned into a canvas and the canvas data is the one that's actually sent to the server.</p>
+            <p>This application was made using the google framework : <b>flutter</b>. It allows for quick and <b>cross-platform</b> delevopment. The preview down below is actually from the same source code as the android application, just build for web. </p>
+            <p>The questions are stored on an <b>express javascript application</b> with questions returned as a response to a <b>POST request</b>. Express apps can be deployed instantly with little knowledge of backend development.</p>
+            <p>Questions are created on a desktop app made with <b>electron</b> that basically turns latex code into images which are then compressed to take as little space as possible. In order to generate the images, the latex code is preview live thanks to <b>Mathjax</b>, once the question is done, the Mathjax container is turned into a canvas and the canvas data is the one that's actually sent to the server.</p>
             <img src="../assets/ex_question_making_app.png" width=900 alt="">
         </div>
         <h1>Try It</h1>
-        <div class="smartphone">
+        <div class="smartphone" id="smartphone">
             <iframe id="iframe"
             title="App Preview"
             width="295"
-            height="585"
+            height="550"
             src="./preview/index.html">
         </iframe>
         <img src="../assets/frame.png" alt="" id="phone-frame">
         <p id="phone-time">00:00</p>
+         <div class="phone-nav">
+            <img src="../assets/reload_icon.png" width=18 alt="" onclick="reloadFrame()">
+            <img src="../assets/fullscreen_icon.png" width=15 height=15 alt="" onclick="fullscreen()">
+            <img src="../assets/return_icon.png" width=12 height=15 alt="" >
+            
         </div>
-        
-        <button onclick="reloadFrame()">
-            Reload
-        </button>
+        </div>
     </div>
         <script>
             setInterval(function () {

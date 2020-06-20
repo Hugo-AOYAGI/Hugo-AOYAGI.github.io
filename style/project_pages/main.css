@@ -125,6 +125,7 @@ iframe {
     overflow-x: hidden;
     margin-left: 480px;
     transition: all 0.5s;
+    height: 700px;
     
 }
 
@@ -144,5 +145,18 @@ iframe {
     filter: none !important;
     width: 300px !important;
     height: 600px !important;
+}
+
+.phone-nav {
+    position: absolute;
+    top: 35.75em;
+    display: flex;
+    left: 2em;
+}
+
+.phone-nav img {
+    cursor: pointer;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
