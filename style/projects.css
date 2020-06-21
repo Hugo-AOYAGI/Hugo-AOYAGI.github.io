@@ -72,6 +72,7 @@
 
 .icons img {
     width: 2em;
+    height: 2em;
     margin-right: 0.5em;
     flex-grow: 0;
     flex-shrink: 0;
@@ -79,10 +80,12 @@
 
 .icons .tk {
     width: 1em;
+    height: 2em;
 }
 
 .icons .pygame {
     width: 5em;
+    height: 2em;
 }
 
 .project-card a img {
@@ -90,10 +93,12 @@
     bottom: 1em;
     left: 1em;
     width: 2em;
+    height: 2em;
     transition: all 0.3s;
 }
 
 .project-card a img:hover {
     width: 2.1em;
+    height: 2em;
 }
 

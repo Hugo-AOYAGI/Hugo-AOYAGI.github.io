@@ -16,6 +16,7 @@ body {
 .patreon-icon img {
     margin-left: 1em;
     width:2em;
+    height: 2em;
     cursor: pointer;
     transition: all 0.5s;
 }
@@ -26,6 +27,7 @@ body {
 
 .gh-icon img {
     width:2em;
+    height: 2em;
     cursor: pointer;
     transition: all 0.5s;
 }

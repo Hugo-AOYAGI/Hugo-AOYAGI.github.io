@@ -2,14 +2,23 @@ body {
     margin: 0;
     font-size: 90%;
     background-color: #f0f0ff;
+    
 }
 
 .section {
     position: relative;
     height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
     background-size: cover;
     background-color: #f0f0ff;
 }
+
+.part-7 {
+    height: 60vh;
+}
+
 
 #img-1 {
     position: absolute;
@@ -23,7 +32,7 @@ body {
     font-weight: 700;
     color: white;
     font-size: 5em;
-    position: relative;
+    position: absolute;
     top: 40%;
     width: 50%;
     left: 10%;
@@ -34,8 +43,8 @@ body {
     font-weight: 200;
     color: white;
     font-size: 1.5em;
-    position: relative;
-    top: 40%;
+    position: absolute;
+    top: 55%;
     left: 10%;
     width: 30%;
 }
@@ -98,7 +107,7 @@ body {
     font-family: 'Libre Franklin', sans-serif;
     font-weight: 700;
     color: white;
-    font-size: 3.5em;
+    font-size: 3.3em;
     position: absolute;
     top: 30%;
     width: 42.5%;
@@ -189,14 +198,14 @@ body {
 .smartphone-container {
     margin-top: 1%;
     position: absolute;
-    left: 20%;
+    left: 5%;
+    width: 30%;
 }
 
 .smartphone {
     z-index: 10;
     position: relative;
     width: fit-content;
-    margin-left: calc(50% - 150px);
 }
 
 #phone-frame {
@@ -229,20 +238,20 @@ iframe {
     position: absolute;
     top: 547px;
     display: flex;
-    left: 35px;
+    left: 45px;
 }
 
 .phone-nav img {
     cursor: pointer;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .phone-disclaimer {
     position: absolute;
-    right: 5%;
+    right: 10%;
     top: 20%;
-    width: 50%;
+    width: 45%;
     color: #03003b;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.3em;
@@ -250,32 +259,77 @@ iframe {
 }
 
 
-@media screen and (min-width: 900px) and (max-width: 1050px) {
+@media screen and (min-width: 695px) and (max-width: 900px) {
+    
     body {
-        font-size: 80%;
-    }
-    
-    .paragraph {
-        font-size: 1.5em;
-    }
-    
-    .right-side-list p {
-        font-size: 1.5em;
-    }
-}
-    
-@media screen and (min-width: 750px) and (max-width: 900px) {
-    body {
-        font-size: 70%;
+        font-size: 65%;
         
     }
     
+    .main-title {
+        left: 5%;
+    }
+    
+    .sub-title {
+        left: 5%;
+    }
+    
+    #img-1 {
+        right: 2.5%;
+    }
+    
+    .header-1 {
+        font-size: 3em;
+    }
+    
     .paragraph {
-        font-size: 1.7em;
+        font-size: 1.5em;
+    }
+    
+    .main-title-2 {
+        width: 50%;
+    }
+    
+    .right-side-list {
+        width: 40%;
+        font-size: 1.2em;
+    }
+    
+    .paragraph.white-font {
+        width: 95%;
+        margin-left: 0;
+    }
+    
+    .phone-disclaimer {
+        right: 2%;
+        font-size: 1.4em;
+    }
+    
+    .img-container-left {
+        width: 30%;
+    }
+    
+    .img-container-left:hover {
+        width: 31%;
+    }
+    
+    .title-right {
+        left: 55% !important;
+    }
+}
+
+
+@media screen and (min-width: 900px) and (max-width: 1050px) {
+    body {
+        font-size: 70%;
+    }
+    
+    .paragraph {
+        font-size: 1.5em;
     }
     
     .right-side-list p {
-        font-size: 1.7em;
+        font-size: 1.5em;
     }
 }
 
