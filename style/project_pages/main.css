@@ -1,11 +1,14 @@
 body {
     margin: 0;
+    font-size: 90%;
+    background-color: #f0f0ff;
 }
 
 .section {
     position: relative;
     height: 100vh;
     background-size: cover;
+    background-color: #f0f0ff;
 }
 
 #img-1 {
@@ -81,7 +84,7 @@ body {
 }
 
 .paragraph {
-    color: #1f15c7;
+    color: #03003b;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.3em;
     font-weight: 500;
@@ -96,7 +99,7 @@ body {
     font-weight: 700;
     color: white;
     font-size: 3.5em;
-    position: relative;
+    position: absolute;
     top: 30%;
     width: 42.5%;
     left: 5%;
@@ -116,8 +119,61 @@ body {
     font-weight: 400;
     width: 80%;
     color: white;
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin-top: 3em;
+}
+
+.title-right {
+    left: 60% !important;
+}
+
+.white-font {
+    color: white;
+}
+
+.p-container-right {
+    width: 47.5%;
+    position: absolute;
+    right: 0%;
+    top: 37.5%;
+}
+
+.img-container-left img {
+    width: 100%;
+}
+
+.img-container-left {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    width: 20%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.img-container-left:hover {
+    width: 21%;
+    left: 9.5%;
+    top: 29.5%;
+}
+
+.img-container-right img {
+    width: 100%;
+}
+
+.img-container-right {
+    position: absolute;
+    right: 15%;
+    top: 33%;
+    width: 15%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.img-container-right:hover {
+    width: 16%;
+    right: 14.5%;
+    top: 32.5%;
 }
 
 
@@ -130,16 +186,21 @@ body {
     border: 2px solid #999994;
 }
 
+.smartphone-container {
+    margin-top: 1%;
+    position: absolute;
+    left: 20%;
+}
+
 .smartphone {
-    z-index: -10;
+    z-index: 10;
     position: relative;
     width: fit-content;
-    margin-top: 1em;
     margin-left: calc(50% - 150px);
 }
 
 #phone-frame {
-    width: 310px;
+    width: 295px;
     position: absolute;
     pointer-events: none;
 }
@@ -166,14 +227,55 @@ iframe {
 
 .phone-nav {
     position: absolute;
-    top: 35.75em;
+    top: 547px;
     display: flex;
-    left: 2em;
+    left: 35px;
 }
 
 .phone-nav img {
     cursor: pointer;
     margin-left: 2em;
     margin-right: 2em;
+}
+
+.phone-disclaimer {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    width: 50%;
+    color: #03003b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+
+@media screen and (min-width: 900px) and (max-width: 1050px) {
+    body {
+        font-size: 80%;
+    }
+    
+    .paragraph {
+        font-size: 1.5em;
+    }
+    
+    .right-side-list p {
+        font-size: 1.5em;
+    }
+}
+    
+@media screen and (min-width: 750px) and (max-width: 900px) {
+    body {
+        font-size: 70%;
+        
+    }
+    
+    .paragraph {
+        font-size: 1.7em;
+    }
+    
+    .right-side-list p {
+        font-size: 1.7em;
+    }
 }
 
