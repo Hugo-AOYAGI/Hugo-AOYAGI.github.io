@@ -117,7 +117,7 @@ body {
 
 .right-side-list {
     position: absolute;
-    right: 0;
+    right: 10%;
     width: 30%;
     height: 60%;
     top: 20%;
@@ -258,8 +258,7 @@ iframe {
     font-weight: 500;
 }
 
-
-@media screen and (min-width: 695px) and (max-width: 900px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
     
     body {
         font-size: 65%;
@@ -292,6 +291,7 @@ iframe {
     
     .right-side-list {
         width: 40%;
+        right: 0%;
         font-size: 1.2em;
     }
     
@@ -333,3 +333,139 @@ iframe {
     }
 }
 
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+    .main-title {
+        top: 30%;
+    }
+    
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .body {
+        font-size: 50%;
+    }
+    
+    .section {
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .main-title {
+        top: 5%;
+        font-size: 2.6em;
+        width: 80%;
+    }
+    
+    .sub-title {
+        width: 80%;
+        top: 14%; 
+        font-size: 1.2em;
+    }
+    
+    #img-1 {
+        height: 70%;
+        left: 15%;
+    }
+    
+    .header-1 {
+        font-size: 1.7em;
+        top: 7.5%;
+    }
+    
+    .cols-2-container {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 25%;
+        width: 100%;
+    }
+
+    .col-of-2 {
+        width: 100%;
+    }
+    
+    .col-of-2 .paragraph {
+        margin-top: 1em;
+        width: calc(100% - 3em);
+        margin-left: 1.5em;
+        margin-bottom: 3em;
+    }
+    
+    .number-circle {
+        margin-left: 1.5em;
+    }
+    
+    .part-2 {
+        height: 120vh;
+    }
+    
+    .part-4 {
+        height: 120vh;
+    }
+    
+    .main-title-2 {
+        font-size: 2em;
+        width: 90%;
+        top: 1em;
+    }
+    
+    .right-side-list {
+        width: 90%;
+        right: 5%;
+    }
+    
+    .title-right {
+        left: 10% !important;
+        width: 80%;
+        text-align: center;
+        
+    }
+    
+    .p-container-right { 
+        left: 0%;
+        width: 100%;
+        top: 50%;
+    }
+    
+    .p-container-right .paragraph { 
+        margin: 5%;
+        width: 90%;
+    }
+    
+    .img-container-left { 
+        width: 50%;
+        left: 25%;
+        top: 17.5%;
+    }
+    
+    .img-container-left:hover { 
+        width: 51%;
+        left: 24.5%;
+        top: 17%;
+    }
+    
+    .part-6 {
+        height: 180vh;
+    }
+    
+    .phone-disclaimer {
+        width: 90%;
+        top: 65%;
+        font-size: 1.2em;
+        margin: 5%;
+        right: 0;
+    }
+    
+    .img-container-right {
+        top: 50%;
+        width: 40%;
+        left: 30%;
+    }
+
+    .img-container-right:hover {
+        top: 49.5%;
+        width: 41%;
+        left: 29.5%;
+    }
+}
