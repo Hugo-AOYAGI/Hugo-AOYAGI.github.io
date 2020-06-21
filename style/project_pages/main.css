@@ -19,6 +19,9 @@ body {
     height: 60vh;
 }
 
+.part-6 {
+    height: 120vh;
+}
 
 #img-1 {
     position: absolute;
@@ -364,8 +367,13 @@ iframe {
     }
     
     #img-1 {
-        height: 70%;
-        left: 15%;
+        height: unset;
+        width: 65%;
+        right: 17.5%;
+    }
+    
+    .part-3 {
+        height: 120vh;
     }
     
     .header-1 {
@@ -413,6 +421,10 @@ iframe {
     .right-side-list {
         width: 90%;
         right: 5%;
+    }
+    
+    .right-side-list p {
+        margin-left: 2em;
     }
     
     .title-right {
@@ -468,4 +480,32 @@ iframe {
         width: 41%;
         left: 29.5%;
     }
+    
+    .smartphone-container {
+        width: 295px;
+        margin-left: auto;
+        margin-right: auto;
+        position: unset;
+    }
+    
+    .smartphone {
+    
+    }
+    
+}
+
+@media screen and (min-width: 350px) and (max-width: 600px) {
+    
+    .img-container-left { 
+        width: 35%;
+        left: 32.5%;
+        top: 17.5%;
+    }
+    
+    .img-container-left:hover { 
+        width: 36%;
+        left: 32%;
+        top: 17%;
+    }
+    
 }
