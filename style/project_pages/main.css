@@ -355,21 +355,35 @@ iframe {
     }
     
     .main-title {
-        top: 5%;
+        position: unset;
+/*        top: 5%;*/
+        width: 90%;
+        margin: 10%;
+        margin-bottom: 0.2em;
         font-size: 2.6em;
         width: 80%;
     }
     
     .sub-title {
         width: 80%;
-        top: 14%; 
+        margin-left: 10%;
+        position: unset;
+/*        top: 14%; */
         font-size: 1.2em;
+    }
+    
+    .part-1 {
+        height: fit-content;
+        padding: 0;
     }
     
     #img-1 {
         height: unset;
-        width: 65%;
-        right: 17.5%;
+        position: unset;
+        width: 75%;
+        margin-left: 12.5%;
+        margin-top: 3em;
+        margin-bottom: -3em;
     }
     
     .part-3 {
@@ -377,15 +391,19 @@ iframe {
     }
     
     .header-1 {
-        font-size: 1.7em;
-        top: 7.5%;
+        font-size: 1.6em;
+        width: calc(100% - 2em);
+        text-align: center;
+        padding: 1em;
+/*        top: 7.5%;*/
+        position: unset;
     }
     
     .cols-2-container {
         display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 25%;
+        position: unset;
+        margin-top: 1em;
         width: 100%;
     }
 
@@ -405,26 +423,37 @@ iframe {
     }
     
     .part-2 {
-        height: 120vh;
+        height: fit-content;
     }
     
     .part-4 {
-        height: 120vh;
+        height: fit-content;
     }
     
     .main-title-2 {
-        font-size: 2em;
+        font-size: 1.8em;
         width: 90%;
-        top: 1em;
+/*        top: 1em;*/
+        position: unset;
+        width: calc(100% - 2em);
+        padding: 1em;
     }
     
     .right-side-list {
-        width: 90%;
-        right: 5%;
+        width: 100%;
+/*        right: 5%;*/
+        position: unset;
+        margin-bottom: 1em;
     }
     
     .right-side-list p {
         margin-left: 2em;
+        margin-top: 0.5em;
+        margin-bottom: 2.5em; 
+    }
+    
+    .part-3 {
+        height: fit-content;
     }
     
     .title-right {
@@ -458,15 +487,17 @@ iframe {
     }
     
     .part-6 {
-        height: 180vh;
+        height: fit-content;
+/*        display: block;*/
     }
     
     .phone-disclaimer {
         width: 90%;
-        top: 65%;
+/*        top: 65%;*/
+        position: unset;
         font-size: 1.2em;
         margin: 5%;
-        right: 0;
+/*        right: 0;*/
     }
     
     .img-container-right {
@@ -483,6 +514,7 @@ iframe {
     
     .smartphone-container {
         width: 295px;
+        height: 600px;
         margin-left: auto;
         margin-right: auto;
         position: unset;
