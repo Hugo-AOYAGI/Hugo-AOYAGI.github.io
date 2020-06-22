@@ -24,6 +24,7 @@
         function fullscreen() {
             window.location = "./preview/index.html";
         }
+        
     </script>
 </head>
 <body>
@@ -88,7 +89,7 @@
                ESSAYEZ LA !
            </div>
            <div class="img-container-left">
-               <img src="../assets/google-play-services-png-logo-3.png" alt="">
+               <img src="../assets/google-play-services-png-logo-3.png" alt="" id="playstore-btn">
            </div>
            <div class="p-container-right">
                <div class="paragraph white-font">
@@ -119,6 +120,8 @@
             </div>
             </div>
             <div class="phone-disclaimer">
+               Il y a encore peu de questions, ne soyez pas déçus si vous tombez sur un chapitre sans aucune question !
+                <br/><br/>
                 Cette version de démonstration est encore instable, il est possible que plusieurs rechargements à l'aide du bouton prévu à cet effet soient nécessaire pour qu'elle se lance proprement !
                 <br><br>
                 Il est possible que vous deviez activer les cookies de sites tiers afin de l'utiliser, en effet, l'application enregistre les questions apprises et le dernier quiz effectué.
@@ -129,7 +132,7 @@
                SOUTENEZ SON DEVELOPPEMENT SUR PATREON
            </div>
            <div class="img-container-right">
-               <img src="../assets/Patreon_logo.svg.png" alt="">
+               <img src="../assets/Patreon_logo.svg.png" alt="" id="patreon-btn">
            </div>
         </div>
         <script>
@@ -138,6 +141,14 @@
                 var datestr = now.getHours().toString() + ":" + (now.getMinutes() < 10 ? "0" + now.getMinutes().toString() : now.getMinutes().toString()); 
                 document.getElementById("phone-time").innerHTML = datestr;
             }, 1000);
+            
+            document.getElementById("patreon-btn").addEventListener("click", function () {
+            window.location = "https://www.patreon.com/hugoaoyagi";
+        })
+        
+            document.getElementById("playstore-btn").addEventListener("click", function () {
+                alert("L'application n'est malheuresement pas encore sortie sur le play store, elle sortira cet été lorsqu'il y aura plus de questions !")
+            })
     </script>
 </body>
 </html>
