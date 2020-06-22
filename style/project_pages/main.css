@@ -20,7 +20,7 @@ body {
 }
 
 .part-6 {
-    height: 120vh;
+    height: 110vh;
 }
 
 #img-1 {
@@ -212,7 +212,8 @@ body {
 }
 
 #phone-frame {
-    width: 295px;
+    width: 330px;
+    height: 615px;
     position: absolute;
     pointer-events: none;
 }
@@ -222,8 +223,8 @@ iframe {
     left: 0.5em;
     top: 1em;
     border: none;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
+    border-top-left-radius: 3em;
+    border-top-right-radius: 3em;
 }
 
 #phone-time {
@@ -231,17 +232,17 @@ iframe {
     position: absolute;
     color: black;
     font-family: 'Montserrat', sans-serif;
-    top: 2.3em;
-    left: 3em;
+    top: 2.8em;
+    left: 3.4em;
     font-size: 0.6em;
     font-weight: 900;
 }
 
 .phone-nav {
     position: absolute;
-    top: 547px;
+    top: 570px;
     display: flex;
-    left: 45px;
+    left: 65px;
 }
 
 .phone-nav img {
@@ -463,21 +464,25 @@ iframe {
         
     }
     
-    .p-container-right { 
-        left: 0%;
+    .p-container-right {
+        position: unset;
         width: 100%;
-        top: 50%;
     }
     
     .p-container-right .paragraph { 
         margin: 5%;
         width: 90%;
+        margin-bottom: 3em;
     }
     
     .img-container-left { 
         width: 50%;
-        left: 25%;
-        top: 17.5%;
+        position: unset;
+        margin-left: 30%;
+    }
+    
+    .part-5 {
+        height: fit-content;
     }
     
     .img-container-left:hover { 
@@ -497,6 +502,7 @@ iframe {
         position: unset;
         font-size: 1.2em;
         margin: 5%;
+        margin-top: 3em;
 /*        right: 0;*/
     }
     
@@ -513,7 +519,7 @@ iframe {
     }
     
     .smartphone-container {
-        width: 295px;
+        width: 330px;
         height: 600px;
         margin-left: auto;
         margin-right: auto;
