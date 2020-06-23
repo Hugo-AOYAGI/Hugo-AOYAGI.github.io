@@ -22,7 +22,9 @@
         }
         
         function fullscreen() {
-            window.location = "./preview/index.html";
+            if (confirm("Le plein écran ne rendra bien que si vous êtes sur téléphone !")) {
+                window.location = "./preview/index.html";
+            }
         }
         
     </script>
