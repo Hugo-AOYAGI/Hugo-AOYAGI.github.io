@@ -3,116 +3,148 @@ body {
     margin: 0;
 }
 
-.main {
-    height: 80vh;
-    margin: 0;
+.title-section {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+/*    background-color: #5CDB95;*/
+    background-color: #379683;
 }
 
-.nav {
+.contacts-wrapper {
+    width: 100%;
+    height: 20%;
+}
+
+.contacts-icons {
+    float: right;
+    display: flex;
+    
+}
+
+.contacts-img {
     margin-top: 1em;
+    width: 2em;
+    margin-right: 2em;
+}
+
+.mail-btn {
     display: flex;
-}
-
-.patreon-icon img {
-    margin-left: 1em;
-    width:2em;
+    margin-top: 1em;
+    width: 5em;
     height: 2em;
-    cursor: pointer;
-    transition: all 0.5s;
+    margin-right: 2em;
+    background-color: white;
+    border-radius: 1em;
 }
 
-.patreon-icon img:hover {
-    transform: rotate(360deg);
+.mail-btn-txt {
+    font-family: 'Montserrat', serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: 900;
+    color: #379683;
+    
 }
 
-.gh-icon img {
-    width:2em;
-    height: 2em;
-    cursor: pointer;
-    transition: all 0.5s;
-}
-
-.gh-icon img:hover {
-    transform: rotate(360deg);
-}
-
-.title-container {
-    margin: 0 auto;
-    margin-top: 20vh;
+.title-wrapper {
     width: fit-content;
-}
-
-.logo {
-    display: flex;
-    width: fit-content;
-}
-
-.logo img {
-    width: 14rem;
-    height: 9rem;
-}
-
-.logo h1 {
-    margin-left: 1rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    width: 11rem;
-    font-size: 3.5rem;
-    font-family: 'Raleway', sans-serif;
-}
-
-.logo h1::after {
-    color: skyblue;
-    content: " AOYAGI";
-    transition: all 0.8s;
-}
-
-
-.logo h1:hover::after {
-    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .title {
-    margin-top: 1rem;
-    font-size: 1.6rem;
-    font-family: 'Raleway', sans-serif;
-    width: fit-content;
-    transition: all 0.8s;
-}
-
-.paint-top {
-    position: absolute;
-    top: 88%;
-    margin: 0;
-    width: 100%;
-}
-
-.paint-bottom {
-    position: absolute;
-    transform: rotate(180deg);
-    top: 199vh;
-    margin: 0;
-    width: 100%;
-}
-
-.checkout-btn {
-    margin-top: 4em;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Raleway', sans-serif;
+    padding-top: 1em;
+    font-family: 'Raleway', serif;
+    font-size: 3em;
+    color: white;
     font-weight: 900;
-    color: #0042ac;
 }
 
-.checkout-btn img {
-    margin-top: 0.5em;
-    cursor: pointer;
-    width: 3em;
-    transition: all 0.1s;
+.title-upper {
+    padding-left: 0.2em;
+    letter-spacing: 0.2em;
 }
 
-.checkout-btn img:hover {
-    margin-top: 0.6em;
-    width: 2.8em
+.lines-canvas {
+    position: absolute;
+    left: -4px;
+    bottom: -4px;
+    height: 100vh;
+    width: 100vh;
+}
+
+
+.projects-section {
+/*    background-color: #379683;*/
+    background-color: #05386B;
+}
+
+.projects-title-wrapper {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.projects-title {
+    padding-top: 1em;
+    font-family: 'Raleway', serif;
+    font-size: 2.5em;
+    color: white;
+    font-weight: 900;
+}
+
+
+.projects-container {
+    display: flex;
+    padding-top: 3em;
+}
+
+.project-card {
+    position: relative;
+    width: 30em;
+    height: 11em;
+    margin-bottom: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2em;
+    
+}
+
+.project-background {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2em;
+}
+
+.project-name-wrapper {
+    position: absolute;
+    height: calc(100% + 10px);
+    width: 60%;
+    top: -5px;
+    background-color: white;
+    border-radius: 2em;
+    box-shadow: 0px 0px 5px  black;
+}
+
+.project-name {
+    font-family: 'Montserrat', serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-left: 2em;
+    margin-top: 1.5em;
+    color: #05386B;
+}
+
+.project-short-desc {
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-top: 1em;
+    font-family: 'Raleway'
 }
