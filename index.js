@@ -3,17 +3,19 @@
 var projects = {
     "Les Taupins": {
         "short-desc": "A mobile app to learn everything there is to know in PTSI/PT.",
+        "long-desc": "A mobile app containing hundreds of questions to study for the PTSI/PT 'Classe Préparatoire'. There are physics, maths, engineering or even french questions.",
         "thumbnail-name": "taupins",
         "langs": ["flutter", "dart", "js", "electron"],
         "type": "mobile",
         "github-link": "https://github.com/Hugo-AOYAGI/prepa_quiz_app",
         "license": "MIT",
         "website": "www.hugo-aoyagi.me/taupins",
-        "links": ["https://play.google.com/store/apps/details?id=com.taupins.app"]
+        "links": ["Google Playstore Link", "https://play.google.com/store/apps/details?id=com.taupins.app"]
     },
     
     "UI Maker": {
         "short-desc": "Python desktop app to create tkinter user interfaces in a heartbeat.",
+        "long-desc": "A tkinter app where you can place widgets on the screen and change all of their properties, then let the program write the code for it with the click of a button.",
         "thumbnail-name": "ui_maker",
         "langs": ["python", "tkinter"],
         "type": "desktop",
@@ -25,6 +27,7 @@ var projects = {
     
     "ReMind": {
         "short-desc": "A Todo App i built to learn electron.",
+        "long-desc": "An electron application where you can create tasks, create a schedule and get notified before an important event.",
         "thumbnail-name": "remind",
         "langs": ["electron", "js", "html", "sass"],
         "type": "desktop",
@@ -36,6 +39,7 @@ var projects = {
     
     "Life On Mars": {
         "short-desc": "A game created for a school project.",
+        "long-desc": "A game built with pygame where you play a rover on Mars trying to make its way through the dangers of the red planet. It comes with a race against an AI.",
         "thumbnail-name": "life_on_mars",
         "langs": ["python", "tkinter", "pygame"],
         "type": "desktop",
@@ -47,6 +51,7 @@ var projects = {
     
     "Personal Website": {
         "short-desc": "The website you are browsing.",
+        "long-desc": "A website that contains some featured programming projects I've done throughout the years as well as some ways to contact me.",
         "thumbnail-name": "personal_website",
         "langs": ["html", "js"],
         "type": "web",
@@ -62,14 +67,14 @@ var projects = {
 
 
 
-document.addEventListener('DOMContentLoaded', function(){ 
-    
-    var projects_container = document.getElementById("projects_container");
+$(document).ready(() => {
+  var projects_container = document.getElementById("projects_container");
     
     Object.keys(projects).forEach((title) => {
         
     let node = document.createElement("div");
-    node.innerHTML = `<div class="project-card">
+    node.classList.add("project-card");
+    node.innerHTML = `
               <img src="assets/thumbnails/${projects[title]["thumbnail-name"]}.png" alt="" class="project-background">
               <div class="project-name-wrapper">
                    <div class="project-name">
@@ -78,10 +83,50 @@ document.addEventListener('DOMContentLoaded', function(){
                    <div class="project-short-desc">
                        ${projects[title]["short-desc"]}
                    </div>
-              </div>
-        </div>`;
+              </div>`;
+        
+        
+    node.addEventListener("click", () => {
+       $(".selected-project-container").css("display", "unset");
+        
+        // Changing every elements
+        $(".upper-title").html(title.toUpperCase());
+        $(".long-desc").html(projects[title]["long-desc"]);
+        
+        if (projects[title]["website"] == "") {
+            $(".website-link").css("display", "none");
+        } else {
+            $(".website-link").css("display", "flex");
+            $(".website-link").html(`<img src="assets/web_icon.png" alt="" class="web-icon"><a href="https://${projects[title]["website"]}">${projects[title]["website"]}</a>`);
+        }
+        
+        if (projects[title]["links"] == "") {
+            $(".other-links").css("display", "none");
+        } else {
+            $(".other-links").css("display", "flex");
+            $(".other-links").html(`<img src="assets/link_icon.png" alt="" class="link-icon">
+                <a href="${projects[title]["links"][1]}">${projects[title]["links"][0]}</a>`);
+        }
+        
+        let string = "";
+        
+        for (let lang of projects[title]["langs"]) {
+            string += `<img src="assets/langs/${lang}.png" alt="${lang}">`
+        }
+        
+        $(".lang-icons").html(string);
+        
+        $(".github-icon-a").attr("href", projects[title]["github-link"]);
+        
+        $(".application-type-icon").attr("src", "assets/" + projects[title]["type"] +".svg");
+        
+    });
+        
         
     projects_container.appendChild(node);
+    }); 
+    
+    $(".sel-proj-close-btn").on("click", () => {
+         $(".selected-project-container").css("display", "none");
     });
-}, false);
-
+})

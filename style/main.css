@@ -16,8 +16,13 @@ body {
     height: 20%;
 }
 
+a {
+    text-decoration: none;
+}
+
 .contacts-icons {
-    float: right;
+    float: left;
+    margin-left: 2em;
     display: flex;
     
 }
@@ -75,6 +80,7 @@ body {
     bottom: -4px;
     height: 100vh;
     width: 100vh;
+    pointer-events: none;
 }
 
 
@@ -98,26 +104,34 @@ body {
     font-weight: 900;
 }
 
-
 .projects-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding-top: 4em;
 }
 
+@supports not (-ms-ime-align: auto) {
+  .projects-container {
+    justify-content: space-evenly;
+  }
+}
+
 .project-card {
+    cursor: pointer;
+    transition: all 0.4s;
     position: relative;
     width: 30em;
     height: 12em;
     margin-bottom: 5em;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 1em;
+    margin-right: 1em;
     border-radius: 2em;
     
 }
 
 .project-background {
+    transition: 0.4s all;
     position: absolute;
     z-index: 0;
     right: 0;
@@ -150,5 +164,159 @@ body {
     padding-left: 2em;
     padding-right: 2em;
     margin-top: 1em;
-    font-family: 'Raleway'
+    font-family: 'Raleway';
+}
+
+.selected-project-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 20, 0.2);
+    display: none;
+    
+}
+
+.sel-proj-close-btn {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    width: 4em;
+}
+
+.sel-proj-info-container {
+    position: absolute;
+    top: 5%;
+    left: 2.5%;
+    width: 25em;
+    height: 90%;
+    border-radius: 2%;
+    background-color: white;
+}
+
+.upper-info-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.application-type-icon {
+    height: 2em;
+    margin: 1em;
+}
+
+.upper-title {
+    font-family: 'Raleway';
+    font-weight: 900;
+    color: #05386B;
+    margin: 1em;
+    font-size: 1.5em;
+}
+
+.long-desc {
+    width: calc(100% - 4em);
+    padding: 2em;
+    font-family: 'Montserrat';
+    font-size: 0.9em;
+}
+
+.website-link {
+    width: 100%;
+    display: flex;
+    
+}
+
+.web-icon {
+    width: 1.5em;
+    margin-left: 3em;
+    margin-right: 1em;
+}
+
+.website-link a {
+    text-decoration: none;
+    font-family: 'Raleway', serif;
+}
+
+.other-links {
+    width: 100%;
+    display: flex;
+    margin-top: 1em;
+    
+}
+
+.link-icon {
+    width: 1.5em;
+    margin-left: 3em;
+    margin-right: 1em;
+}
+
+.other-links a {
+    text-decoration: none;
+    font-family: 'Raleway', serif;
+}
+
+.langs {
+    float: left;
+    margin-top: 2em;
+    width: calc(50% - 2em);
+    padding: 1em;
+}
+
+.lang-label {
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+hr {
+    border-top: 1px solid grey;
+    border-bottom: none;
+}
+
+.lang-icons {
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.lang-icons img {
+    height: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+}
+
+.row-of-two {
+    display: flex;
+}
+
+.license {
+    display: flex;
+    height: 6em;
+    width: calc(50% - 2em);
+    padding: 1em;
+    align-items: center;
+}
+
+.license-icon {
+    height: 2em;
+    margin-right: 0.5em;
+}
+
+.license-label {
+    font-family: 'Raleway', serif;
+    font-size: 1.1em;
+}
+
+
+.github-icon-a {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+}
+
+.github-icon {
+    width: 2.5em;
 }
