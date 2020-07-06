@@ -59,7 +59,7 @@ body {
 .title {
     padding-top: 1em;
     font-family: 'Raleway', serif;
-    font-size: 3em;
+    font-size: 4.5em;
     color: white;
     font-weight: 900;
 }
@@ -101,14 +101,16 @@ body {
 
 .projects-container {
     display: flex;
-    padding-top: 3em;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 4em;
 }
 
 .project-card {
     position: relative;
     width: 30em;
-    height: 11em;
-    margin-bottom: 3em;
+    height: 12em;
+    margin-bottom: 5em;
     margin-left: auto;
     margin-right: auto;
     border-radius: 2em;
@@ -118,9 +120,10 @@ body {
 .project-background {
     position: absolute;
     z-index: 0;
-    width: 100%;
+    right: 0;
+    width: 70%;
     height: 100%;
-    border-radius: 2em;
+    border-radius: 0.5em;
 }
 
 .project-name-wrapper {
@@ -129,7 +132,8 @@ body {
     width: 60%;
     top: -5px;
     background-color: white;
-    border-radius: 2em;
+    border-radius: 0.5em;
+    
     box-shadow: 0px 0px 5px  black;
 }
 

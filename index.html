@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="index.js"></script>
 <title>Hugo AOYAGI</title>
 </head>
 <body>
@@ -42,11 +43,18 @@
                 var c = document.getElementById("lines-canv");
                 var ctx = c.getContext("2d");
                 
-                ctx.strokeStyle = '#05386B';
+                
+                ctx.strokeStyle = '#60A0AD';
                 ctx.lineWidth = 7;
                 
-                // Draw the lines
+                for (i=1; i<9; i++) {
+                    ctx.beginPath();
+                    ctx.moveTo(0, i*180);
+                    ctx.lineTo(i*180, 1985);
+                    ctx.stroke();
+                }
                 
+                ctx.strokeStyle = '#05386B';
                 
                 for (i=1; i<9; i++) {
                     ctx.beginPath();
@@ -63,20 +71,8 @@
                Projects
            </div>
           </div>
-           <div class="projects-container">
-               <div class="project-card">
-                 <img src="" alt="" class="upper-image">
-                  <img src="assets/banners/taupins.png" alt="" class="project-background">
-                  <div class="project-name-wrapper">
-                      <div class="project-name">
-                       LES TAUPINS
-                       </div>
-                       <div class="project-short-desc">
-                           A mobile app to learn everything there is to know in PTSI/PT.
-                       </div>
-                  </div>
-                   
-               </div>
+           <div class="projects-container" id="projects_container">
+               
            </div>
         </div>
     </div>
