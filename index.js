@@ -10,7 +10,8 @@ var projects = {
         "github-link": "https://github.com/Hugo-AOYAGI/prepa_quiz_app",
         "license": "MIT",
         "website": "www.hugo-aoyagi.me/taupins",
-        "links": ["Google Playstore Link", "https://play.google.com/store/apps/details?id=com.taupins.app"]
+        "links": ["Google Playstore Link", "https://play.google.com/store/apps/details?id=com.taupins.app"],
+        "screenshots": ["1.jpg", "2.jpg", "3.jpg", "4.jpg"]
     },
     
     "UI Maker": {
@@ -22,7 +23,8 @@ var projects = {
         "github-link": "https://github.com/Hugo-AOYAGI/Python-Tkinter-UI-Maker",
         "license": "MIT",
         "website": "",
-        "links": []
+        "links": [],
+        "screenshots": ["1.png", "2.png"]
     },
     
     "ReMind": {
@@ -34,7 +36,8 @@ var projects = {
         "github-link": "https://github.com/Hugo-AOYAGI/ToDoApp",
         "license": "MIT",
         "website": "",
-        "links": []
+        "links": [],
+        "screenshots": ["1.png", "2.png", "3.png"]
     },
     
     "Life On Mars": {
@@ -46,7 +49,8 @@ var projects = {
         "github-link": "https://github.com/Hugo-AOYAGI/Life-on-mars-game",
         "license": "MIT",
         "website": "",
-        "links": []
+        "links": [],
+        "screenshots": ["1.png", "2.png", "3.png"]
     },
     
     "Personal Website": {
@@ -58,13 +62,14 @@ var projects = {
         "github-link": "https://github.com/Hugo-AOYAGI/Hugo-AOYAGI.github.io",
         "license": "MIT",
         "website": "www.hugo-aoyagi.me",
-        "links": []
+        "links": [],
+        "screenshots": ["1.png", "2.png", "3.png"]
     }
 
 };
 
 
-
+var selected_image_index = 1;
 
 
 $(document).ready(() => {
@@ -120,6 +125,38 @@ $(document).ready(() => {
         
         $(".application-type-icon").attr("src", "assets/" + projects[title]["type"] +".svg");
         
+        // Creating carousel and its images
+        $(".sel-proj-images-container").html("");
+        $(".sel-proj-carousel-btns").html("");
+        
+        let images_string = ""
+        for (let i = 0; i < projects[title]["screenshots"].length; i++) {
+            // Images
+            let image_node = $(`<img src="assets/screenshots/${projects[title]["thumbnail-name"] + "/" + projects[title]["screenshots"][i]}" alt="" class="carousel-image" id="img-${(i+1).toString()}">`);
+            if (i == 0) image_node.addClass("selected-carousel-image");
+            $(".sel-proj-images-container").append(image_node);
+            
+            
+            // Buttons
+            let btn_node = $(`<div class="carousel-btn" id="btn-${(i+1).toString()}"></div>`);
+            if (i == 0) btn_node.addClass("carousel-btn-selected");
+            btn_node.on("click", () => {
+                
+                
+                $("#img-" + selected_image_index.toString()).removeClass("selected-carousel-image");
+                $("#btn-" + selected_image_index.toString()).removeClass("carousel-btn-selected");
+                
+                selected_image_index = (i+1);
+                
+                
+                $("#img-" + (i+1).toString()).addClass("selected-carousel-image");
+                $("#btn-" + (i+1).toString()).addClass("carousel-btn-selected");
+            });
+            $(".sel-proj-carousel-btns").append(btn_node);
+            
+            
+        }
+        
     });
         
         
@@ -127,6 +164,7 @@ $(document).ready(() => {
     }); 
     
     $(".sel-proj-close-btn").on("click", () => {
-         $(".selected-project-container").css("display", "none");
+        $(".selected-project-container").css("display", "none");
+        selected_image_index = 1;
     });
 })

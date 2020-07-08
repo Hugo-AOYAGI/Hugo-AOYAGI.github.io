@@ -362,6 +362,11 @@ hr {
 
 .carousel-image {
     height: 100%;
+    display: none;
+}
+
+.selected-carousel-image {
+    display: unset;
 }
 
 .sel-proj-carousel-btns {
@@ -379,6 +384,7 @@ hr {
     margin-right: 0.5em;
     border-radius: 50%;
     background-color: rgba(150, 150, 150, 0.2);
+    cursor: pointer;
 }
 
 .carousel-btn-selected {
