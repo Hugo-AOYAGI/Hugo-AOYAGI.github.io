@@ -16,11 +16,33 @@ body {
 }
 
 .part-7 {
-    height: 50vh;
+    height: 20vh;
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1500px) {
+    .part-7 {
+        height: 30vh;
+    }
+
+}
+
+@media screen and (min-width: 1500px) and (max-width: 2000px) {
+    .part-7 {
+        height: 35vh;
+    }
+
+}
+
+@media screen and (min-width: 2000px) {
+    .part-7 {
+        height: 40vh;
+    }
+
+}
+
+
 .part-6 {
-    height: 110vh;
+    height: 640px;
 }
 
 .part-1 {
@@ -226,9 +248,9 @@ body {
 
 .smartphone-container {
     margin-top: 1%;
-    position: absolute;
-    left: 5%;
-    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
 }
 
 .smartphone {
@@ -512,7 +534,8 @@ iframe {
     .img-container-left { 
         width: 50%;
         position: unset;
-        margin-left: 25%;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .part-5 {
@@ -526,7 +549,6 @@ iframe {
     }
     
     .part-6 {
-        height: fit-content;
 /*        display: block;*/
     }
     
@@ -541,15 +563,20 @@ iframe {
     }
     
     .img-container-right {
-        top: 50%;
+        position: unset;
         width: 40%;
-        left: 30%;
+        margin-top: 1em;
+        margin-bottom: 2em;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .img-container-right:hover {
-        top: 49.5%;
         width: 41%;
-        left: 29.5%;
+    }
+    
+    .part-7 {
+        height: fit-content;
     }
     
     .smartphone-container {
@@ -594,6 +621,19 @@ iframe {
         font-size: 130%;
     }
     
+    iframe {
+        left: 0.25em;
+        top: 0.5em;
+        border: none;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+    }
+    
+    #phone-time {
+        top: 1.5em;
+        left: 2.4em;
+    }
+    
 } 
 
 
@@ -601,6 +641,19 @@ iframe {
     
     body {
         font-size: 150%;
+    }
+    
+    iframe {
+        left: 0.25em;
+        top: 0.5em;
+        border: none;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+    }
+    
+    #phone-time {
+        top: 1.5em;
+        left: 2.4em;
     }
     
 } 
