@@ -45,7 +45,8 @@ a {
     width: 5em;
     height: 2em;
     margin-right: 2em;
-    background-color: white;
+    background-color: #379683;
+    border: 3px solid white;
     border-radius: 1em;
 }
 
@@ -60,7 +61,7 @@ a {
     margin-top: auto;
     margin-bottom: auto;
     font-weight: 900;
-    color: #379683;
+    color: white;
     
 }
 
