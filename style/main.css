@@ -248,6 +248,7 @@ a {
     width: 1.5em;
     margin-left: 3em;
     margin-right: 1em;
+    align-items: flex-start;
 }
 
 .website-link a {
@@ -266,6 +267,7 @@ a {
     width: 1.5em;
     margin-left: 3em;
     margin-right: 1em;
+    align-items: flex-start;
 }
 
 .other-links a {
