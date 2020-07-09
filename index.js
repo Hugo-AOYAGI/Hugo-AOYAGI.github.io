@@ -70,6 +70,7 @@ var projects = {
 
 
 var selected_image_index = 1;
+var curr_screenshots_number = 0;
 
 
 $(document).ready(() => {
@@ -129,7 +130,8 @@ $(document).ready(() => {
         $(".sel-proj-images-container").html("");
         $(".sel-proj-carousel-btns").html("");
         
-        let images_string = ""
+        let images_string = "";
+        curr_screenshots_number = projects[title]["screenshots"].length;
         for (let i = 0; i < projects[title]["screenshots"].length; i++) {
             // Images
             let image_node = $(`<img src="assets/screenshots/${projects[title]["thumbnail-name"] + "/" + projects[title]["screenshots"][i]}" alt="" class="carousel-image" id="img-${(i+1).toString()}">`);
@@ -166,5 +168,27 @@ $(document).ready(() => {
     $(".sel-proj-close-btn").on("click", () => {
         $(".selected-project-container").css("display", "none");
         selected_image_index = 1;
+    });
+    
+    $(".carousel-left-arrow").on("click", () => {
+        $("#img-" + selected_image_index.toString()).removeClass("selected-carousel-image");
+        $("#btn-" + selected_image_index.toString()).removeClass("carousel-btn-selected");
+
+        selected_image_index = selected_image_index == 1 ? curr_screenshots_number : selected_image_index - 1 ;
+
+
+        $("#img-" + selected_image_index.toString()).addClass("selected-carousel-image");
+        $("#btn-" + selected_image_index.toString()).addClass("carousel-btn-selected");
+    });
+    
+    $(".carousel-right-arrow").on("click", () => {
+        $("#img-" + selected_image_index.toString()).removeClass("selected-carousel-image");
+        $("#btn-" + selected_image_index.toString()).removeClass("carousel-btn-selected");
+
+        selected_image_index = selected_image_index == curr_screenshots_number ? 1 : selected_image_index + 1;
+
+
+        $("#img-" + selected_image_index.toString()).addClass("selected-carousel-image");
+        $("#btn-" + selected_image_index.toString()).addClass("carousel-btn-selected");
     });
 })

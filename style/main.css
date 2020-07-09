@@ -207,7 +207,7 @@ a {
     position: absolute;
     top: 5%;
     left: 2.5%;
-    width: 25em;
+    width: 30%;
     height: 90%;
     border-radius: 2%;
     background-color: white;
@@ -344,8 +344,8 @@ hr {
     width: fit-content;
     height: 75%;
     top: 15%;
-    width: calc(100% - 35em);
-    left: 30em;
+    width: 60%;
+    left: 35%;
 /*    background-color: white;*/
     overflow: hidden;
     display: flex;
@@ -359,6 +359,7 @@ hr {
     display: flex;
     justify-content: center;
     object-fit: scale-down;
+    overflow-x: hidden;
 }
 
 .carousel-image {
@@ -393,4 +394,56 @@ hr {
 
 .carousel-btn-selected {
     background-color: aliceblue;
+}
+
+.carousel-left-arrow {
+    transition: 0.3s all;
+    cursor: pointer;
+    position: absolute;
+    height: 90%;
+    width: 5em;
+    display: flex;
+    align-content: center;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+}
+
+.carousel-left-arrow:hover {
+    opacity: 0.5;
+}
+
+.carousel-left-arrow img {
+    transform: rotate(90deg);
+    width: 5em;
+}
+
+.carousel-right-arrow {
+    cursor: pointer;
+    transition: 0.3s all;
+    position: absolute;
+    height: 90%;
+    width: 5em;
+    right: 0;
+    display: flex;
+    align-content: center;
+    background-color: black;
+    opacity: 0;
+}
+
+.carousel-right-arrow:hover {
+    opacity: 0.5;
+}
+
+.carousel-right-arrow img {
+    transform: rotate(-90deg);
+    width: 5em;
+}
+
+.selectDisable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
