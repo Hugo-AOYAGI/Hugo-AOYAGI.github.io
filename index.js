@@ -3,7 +3,7 @@
 var projects = {
     "Les Taupins": {
         "short-desc": "A mobile app to learn everything there is to know in PTSI/PT.",
-        "long-desc": "A mobile app containing hundreds of questions to study for the PTSI/PT 'Classe Préparatoire'. There are physics, maths, engineering or even french questions.",
+        "long-desc": "A mobile app containing hundreds of questions to study for the PTSI/PT 'Classe Préparatoire'.",
         "thumbnail-name": "taupins",
         "langs": ["flutter", "dart", "js", "electron"],
         "type": "mobile",
@@ -166,6 +166,11 @@ $(document).ready(() => {
     }); 
     
     $(".sel-proj-close-btn").on("click", () => {
+        $(".selected-project-container").css("display", "none");
+        selected_image_index = 1;
+    });
+    
+    $(".sel-proj-close-btn-black").on("click", () => {
         $(".selected-project-container").css("display", "none");
         selected_image_index = 1;
     });

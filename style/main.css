@@ -21,6 +21,10 @@ a {
     text-decoration: none;
 }
 
+#license-top {
+        display: none;
+}
+
 .contacts-icons {
     float: left;
     margin-left: 2em;
@@ -525,6 +529,11 @@ hr {
         height: auto;
     }
     
+    .project-card:hover .project-background{
+        right: 0%;
+        bottom: 70%;
+    }
+    
     .project-name-wrapper {
         width: 100%;
     }
@@ -552,4 +561,235 @@ hr {
     .project-background {
         bottom: 60%;
     }
+}
+
+@media screen and (max-width: 950px) and (min-width: 600px) {
+    
+
+    .sel-proj-close-btn {
+        bottom: 2%;
+        top: unset;
+        left: 2%;
+    }
+
+
+    .sel-proj-info-container {
+        top: 1%;
+        width: 95%;
+        height: 40%;
+        border-radius: 0.5em;
+        display: flex;
+    }
+    
+    .title-and-desc {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+    }
+
+    .upper-info-row {
+        height: fit-content;
+    }
+    
+    .links {
+        flex-basis: 1;
+    }
+    
+    #license-top {
+        margin-top: 0;
+        padding-top: 0;
+        width: 80%;
+    }
+    
+    .website-link {
+        margin-top: 2em;
+    }
+
+    .web-icon {
+        width: 1.2em;
+        height: 1.2em;
+        margin-left: 0.5em;
+    }
+
+
+    .link-icon {
+        width: 1.2em;
+        height: 1.2em;
+        margin-left: 0.5em;
+    }
+
+    #license-right {
+        display: none;
+    }
+    
+    .row-of-two {
+        display: unset;
+        flex-basis: 30%;
+    }
+
+    .langs {
+        width: calc(100% - 2em);
+    }
+
+    .github-icon-a {
+        right: 0.5em;
+        bottom: 0.2em;
+    }
+
+    .github-icon {
+        width: 1.5em;
+    }
+
+    .sel-proj-carousel {
+        height: 50%;
+        top: 45%;
+        width: 70%;
+        left: 15%;
+/*        background-color: white;*/
+    }
+
+    .sel-proj-images-container {
+        position: relative;
+        height: 90%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        object-fit: scale-down;
+        overflow-x: hidden;
+    }
+
+    .carousel-image {
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        display: none;
+    }
+
+    .selected-carousel-image {
+        display: block;
+    }
+
+    .sel-proj-carousel-btns {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-btn {
+        width: 0.5em;
+        height: 0.5em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        border-radius: 50%;
+        background-color: rgba(150, 150, 150, 0.2);
+        cursor: pointer;
+    }
+
+    .carousel-btn-selected {
+        background-color: aliceblue;
+    }
+
+    .carousel-left-arrow {
+        transition: 0.3s all;
+        cursor: pointer;
+        position: absolute;
+        height: 90%;
+        width: 5em;
+        display: flex;
+        align-content: center;
+        left: 0;
+        background-color: black;
+        opacity: 0;
+    }
+
+    .carousel-left-arrow:hover {
+        opacity: 0.5;
+    }
+
+    .carousel-left-arrow img {
+        transform: rotate(90deg);
+        width: 5em;
+    }
+
+    .carousel-right-arrow {
+        cursor: pointer;
+        transition: 0.3s all;
+        position: absolute;
+        height: 90%;
+        width: 5em;
+        right: 0;
+        display: flex;
+        align-content: center;
+        background-color: black;
+        opacity: 0;
+    }
+
+    .carousel-right-arrow:hover {
+        opacity: 0.5;
+    }
+
+    .carousel-right-arrow img {
+        transform: rotate(-90deg);
+        width: 5em;
+    }
+    
+}
+
+.sel-proj-close-btn-black {
+    cursor: pointer;
+    z-index: 100;
+    transition: 0.3s all;
+    position: absolute;
+    left: 1em;
+    bottom: 1em;
+    width: 2em;
+    display: none;
+}
+
+.sel-proj-close-btn-black:hover {
+    transform: rotate(90deg);
+}
+
+@media screen and (max-width: 600px) and (min-width: 300px) {
+    
+    .sel-proj-close-btn {
+        display: none;
+    }
+
+
+    .sel-proj-info-container {
+        top: 1%;
+        width: 95%;
+        height: 98%;
+    }
+    
+    .sel-proj-carousel {
+        display: none;
+    }
+    
+    #license-top {
+        display: none;
+    }
+    
+    .web-icon {
+        width: 1.2em;
+        height: 1.2em;
+        margin-left: 1em;
+    }
+
+
+    .link-icon {
+        width: 1.2em;
+        height: 1.2em;
+        margin-left: 1em;
+    }
+    
+    .sel-proj-close-btn-black {
+        display: unset;
+    }
+    
+    
 }
