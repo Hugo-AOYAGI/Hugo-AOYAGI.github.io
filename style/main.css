@@ -28,11 +28,15 @@ a {
 .contacts-icons {
     float: left;
     margin-left: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     
 }
 
 .contacts-img {
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
     transition: 0.2s all;
     margin-top: 1em;
     width: 2em;
@@ -47,7 +51,11 @@ a {
 }
 
 .mail-btn {
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
     transition: 0.3s all;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 1em;
     width: 5em;
@@ -73,6 +81,8 @@ a {
 }
 
 .title-wrapper {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -108,6 +118,8 @@ a {
 }
 
 .projects-title-wrapper {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -123,20 +135,29 @@ a {
 }
 
 .projects-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-top: 4em;
 }
 
 @supports not (-ms-ime-align: auto) {
   .projects-container {
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 
 .project-card {
     cursor: pointer;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
     transition: all 0.4s;
     position: relative;
     width: 30em;
@@ -147,6 +168,8 @@ a {
 }
 
 .project-background {
+    -webkit-transition: 0.4s all;
+    -o-transition: 0.4s all;
     transition: 0.4s all;
     position: absolute;
     z-index: 0;
@@ -168,7 +191,9 @@ a {
     background-color: white;
     border-radius: 0.5em;
     
-    box-shadow: 0px 0px 5px  black;
+    -webkit-box-shadow: 0px 0px 5px  black;
+    
+            box-shadow: 0px 0px 5px  black;
 }
 
 .project-name {
@@ -200,6 +225,8 @@ a {
 
 .sel-proj-close-btn {
     cursor: pointer;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
     transition: 0.3s all;
     position: absolute;
     right: 1em;
@@ -208,7 +235,9 @@ a {
 }
 
 .sel-proj-close-btn:hover {
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
 
 .sel-proj-info-container {
@@ -222,8 +251,12 @@ a {
 }
 
 .upper-info-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .application-type-icon {
@@ -250,6 +283,8 @@ a {
 
 .website-link {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     
 }
@@ -258,7 +293,9 @@ a {
     width: 1.5em;
     margin-left: 3em;
     margin-right: 1em;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 
 .website-link a {
@@ -268,6 +305,8 @@ a {
 
 .other-links {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 0.5em;
     
@@ -277,7 +316,9 @@ a {
     width: 1.5em;
     margin-left: 3em;
     margin-right: 1em;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 
 .other-links a {
@@ -306,9 +347,13 @@ hr {
 
 .lang-icons {
     margin-top: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 
 .lang-icons img {
@@ -319,15 +364,21 @@ hr {
 }
 
 .row-of-two {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .license {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 6em;
     width: calc(50% - 2em);
     padding: 1em;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .license-icon {
@@ -353,6 +404,8 @@ hr {
 
 .sel-proj-carousel {
     position: absolute;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     height: 75%;
     top: 15%;
@@ -360,17 +413,27 @@ hr {
     left: 35%;
 /*    background-color: white;*/
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .sel-proj-images-container {
     position: relative;
     height: 90%;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    object-fit: scale-down;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
     overflow-x: hidden;
 }
 
@@ -389,9 +452,15 @@ hr {
 .sel-proj-carousel-btns {
     height: 10%;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .carousel-btn {
@@ -409,13 +478,18 @@ hr {
 }
 
 .carousel-left-arrow {
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
     transition: 0.3s all;
     cursor: pointer;
     position: absolute;
     height: 90%;
     width: 5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
     left: 0;
     background-color: black;
     opacity: 0;
@@ -426,19 +500,26 @@ hr {
 }
 
 .carousel-left-arrow img {
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
     width: 5em;
 }
 
 .carousel-right-arrow {
     cursor: pointer;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
     transition: 0.3s all;
     position: absolute;
     height: 90%;
     width: 5em;
     right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
     background-color: black;
     opacity: 0;
 }
@@ -448,16 +529,18 @@ hr {
 }
 
 .carousel-right-arrow img {
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
     width: 5em;
 }
 
 .selectDisable {
     -webkit-user-select: none;
-    -khtml-user-select: none;
     -moz-user-select: none;
     -o-user-select: none;
-    user-select: none;
+    -ms-user-select: none;
+        user-select: none;
 }
 
 
@@ -516,6 +599,8 @@ hr {
         float: unset;
         margin-left: auto;
         margin-right: auto;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
     }
     
@@ -578,21 +663,32 @@ hr {
         width: 95%;
         height: 40%;
         border-radius: 0.5em;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
     
     .title-and-desc {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        flex-basis: 50%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
     }
 
     .upper-info-row {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
     }
     
     .links {
-        flex-basis: 1;
+        -ms-flex-preferred-size: 1;
+            flex-basis: 1;
     }
     
     #license-top {
@@ -624,7 +720,8 @@ hr {
     
     .row-of-two {
         display: unset;
-        flex-basis: 30%;
+        -ms-flex-preferred-size: 30%;
+            flex-basis: 30%;
     }
 
     .langs {
@@ -652,9 +749,14 @@ hr {
         position: relative;
         height: 90%;
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        object-fit: scale-down;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -o-object-fit: scale-down;
+           object-fit: scale-down;
         overflow-x: hidden;
     }
 
@@ -673,9 +775,15 @@ hr {
     .sel-proj-carousel-btns {
         height: 10%;
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .carousel-btn {
@@ -693,13 +801,18 @@ hr {
     }
 
     .carousel-left-arrow {
+        -webkit-transition: 0.3s all;
+        -o-transition: 0.3s all;
         transition: 0.3s all;
         cursor: pointer;
         position: absolute;
         height: 90%;
         width: 5em;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
         left: 0;
         background-color: black;
         opacity: 0;
@@ -710,19 +823,26 @@ hr {
     }
 
     .carousel-left-arrow img {
-        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
         width: 5em;
     }
 
     .carousel-right-arrow {
         cursor: pointer;
+        -webkit-transition: 0.3s all;
+        -o-transition: 0.3s all;
         transition: 0.3s all;
         position: absolute;
         height: 90%;
         width: 5em;
         right: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
         background-color: black;
         opacity: 0;
     }
@@ -732,7 +852,9 @@ hr {
     }
 
     .carousel-right-arrow img {
-        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+                transform: rotate(-90deg);
         width: 5em;
     }
     
@@ -741,6 +863,8 @@ hr {
 .sel-proj-close-btn-black {
     cursor: pointer;
     z-index: 100;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
     transition: 0.3s all;
     position: absolute;
     left: 1em;
@@ -750,7 +874,9 @@ hr {
 }
 
 .sel-proj-close-btn-black:hover {
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
 
 @media screen and (max-width: 600px) and (min-width: 300px) {

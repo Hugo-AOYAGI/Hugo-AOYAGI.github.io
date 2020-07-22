@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     font-size: 90%;
@@ -21,21 +22,21 @@ body {
 
 @media screen and (min-width: 1000px) and (max-width: 1500px) {
     .part-7 {
-        height: 30vh;
+        height: 45vh;
     }
 
 }
 
 @media screen and (min-width: 1500px) and (max-width: 2000px) {
     .part-7 {
-        height: 35vh;
+        height: 50vh;
     }
 
 }
 
 @media screen and (min-width: 2000px) {
     .part-7 {
-        height: 40vh;
+        height: 55vh;
     }
 
 }
@@ -46,22 +47,32 @@ body {
 }
 
 .part-1 {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
 .part-3 {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
 .part-2 {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
 .part-4 {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
 .part-5 {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
@@ -106,6 +117,8 @@ body {
 }
 
 .cols-2-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 4em;
     width: 100%;
@@ -118,8 +131,12 @@ body {
 
 .number-circle {
     color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-     align-items: center;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
     background-color: #5271ff;
     width: 3.5em;
     height: 3.5em;
@@ -208,6 +225,8 @@ body {
     top: 20%;
     width: 20%;
     cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -227,6 +246,8 @@ body {
     top: 33%;
     width: 15%;
     cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -240,8 +261,11 @@ body {
 .phone {
     border-radius: 0.5em;
     margin: 1em;
-    flex-grow: 0;
-    flex-shrink: 0;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     margin: auto;
     border: 2px solid #999994;
 }
@@ -256,6 +280,8 @@ body {
 .smartphone {
     z-index: 10;
     position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -289,6 +315,8 @@ iframe {
 .phone-nav {
     position: absolute;
     top: 570px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     left: 65px;
 }
@@ -423,6 +451,8 @@ iframe {
     }
     
     .part-1 {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         padding: 0;
     }
@@ -453,8 +483,13 @@ iframe {
     }
     
     .cols-2-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         position: unset;
         margin-top: 1em;
         margin-bottom: 0em;
@@ -477,10 +512,14 @@ iframe {
     }
     
     .part-2 {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
     }
     
     .part-4 {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
     }
     
@@ -509,6 +548,8 @@ iframe {
     }
     
     .part-3 {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
     }
     
@@ -539,6 +580,8 @@ iframe {
     }
     
     .part-5 {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
     }
     
@@ -576,6 +619,8 @@ iframe {
     }
     
     .part-7 {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
     }
     
