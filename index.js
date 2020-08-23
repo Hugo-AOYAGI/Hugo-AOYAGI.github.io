@@ -64,6 +64,34 @@ var projects = {
         "website": "www.hugo-aoyagi.me",
         "links": [],
         "screenshots": ["1.png", "2.png", "3.png"]
+    },
+    
+    "Formula Checker": {
+        "short-desc": "A website to check if a formula is dimensionally homogeneous.",
+        "long-desc": "This website allows you to type any formula you wish, specify the dimension of every variable and checks you are not adding length and time for instance.",
+        "thumbnail-name": "formula_checker",
+        "langs": ["html", "sass", "js"],
+        "type": "web",
+        "github-link": "https://github.com/Hugo-AOYAGI/formula-checker",
+        "license": "MIT",
+        "website": "http://formula-checker.azurewebsites.net/",
+        "links": [],
+        "screenshots": ["1.png", "2.png", "3.png"]
+    }
+    
+    ,
+    
+    "Math Keyboard": {
+        "short-desc": "A mobile keyboard with custom layouts that make typing equations easy.",
+        "long-desc": "This is a javascript module to add to your projects which adds a math keyboard for mobile devices. It works with inputs or divs but is better when joined with mathquill.",
+        "thumbnail-name": "math_keyboard",
+        "langs": ["html", "js"],
+        "type": "web",
+        "github-link": "https://github.com/Hugo-AOYAGI/math_keyboard",
+        "license": "MIT",
+        website: "",
+        "links": [],
+        "screenshots": ["1.png", "2.png", "3.png"]
     }
 
 };
