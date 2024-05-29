@@ -1,141 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Hugo AOYAGI's personal website">
-  <meta name="keywords" content="programming, hugo, aoyagi">
-  <meta name="author" content="Hugo AOYAGI">
-  <link rel="icon" type="image/png" href="assets/favicons/logo.png" />
-  <link rel="stylesheet" href="style/main.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="index.js"></script>
-<title>Hugo AOYAGI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap');</style>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="main">
-       <div class="title-section">
-          <div class="contacts-wrapper">
-              <div class="contacts-icons">
-                 <a href="mailto:aoyagihugo@gmail.com"><div class="mail-btn">
-                     <div class="mail-btn-txt">EMAIL</div>
-                 </div></a>
-                 <a href="https://github.com/Hugo-AOYAGI/"><img src="assets/github.png" alt="" class="contacts-img"></a>
-                 <a href="https://www.patreon.com/hugoaoyagi"><img src="assets/patreon.svg" alt="" class="contacts-img"></a>
-              </div>
-          </div>
-           <div class="title-wrapper">
-            <div class="title">
-                <div class="title-upper">
-                    <div class="title-upper-text">
-                        HUGO
-                    </div>
-                </div>
-                <div class="title-lower">
-                    AOYAGI
-                </div>
-            </div>
-            <div class="lines-canvas-container">
-                <canvas class="lines-canvas" id="lines-canv" width=2000 height=2000>
-            </canvas>
-            </div>
-            <script>
-                var c = document.getElementById("lines-canv");
-                var ctx = c.getContext("2d");
-                
-                
-                ctx.strokeStyle = '#60A0AD';
-                ctx.lineWidth = 7;
-                
-                for (i=1; i<9; i++) {
-                    ctx.beginPath();
-                    ctx.moveTo(0, i*180);
-                    ctx.lineTo(i*180, 1985);
-                    ctx.stroke();
-                }
-                
-                ctx.strokeStyle = '#05386B';
-                
-                for (i=1; i<9; i++) {
-                    ctx.beginPath();
-                    ctx.moveTo(0, i*200);
-                    ctx.lineTo(i*200, 2000);
-                    ctx.stroke();
-                }
-            </script>
-        </div>
-       </div>
-        <div class="projects-section">
-          <div class="projects-title-wrapper">
-              <div class="projects-title">
-               Projects
-           </div>
-          </div>
-           <div class="projects-container" id="projects_container">
-               
-           </div>
-        </div>
+    <div class="main-title">
+        <div class="left-col title-col"></div>
+        <div class="right-col title-col"></div>
     </div>
-    
-    <div class="selected-project-container">
-        <img class="sel-proj-close-btn" src="assets/close_btn.png">
-        <img class="sel-proj-close-btn-black" src="assets/close_btn_black.png">
-        <div class="sel-proj-info-container">
-           <div class="title-and-desc">
-               <div class="upper-info-row">
-                <div class="upper-title">LES TAUPINS</div>
-                <img class="application-type-icon" src="assets/mobile.svg">
-            </div>
-            <div class="long-desc">
-                A mobile app containing hundreds of questions to study for the PTSI/PT "Classe Préparatoire". There are physics, maths, engineering or even french questions.
-            </div>
-           </div>
-           <div class="proj-links">
-               <div class="website-link">
-                
-                </div>
 
-                <div class="other-links">
-
-                </div>
-                <div class="license" id="license-top">
-                    <img src="assets/licence.png" alt="" class="license-icon">
-                    <div class="license-label">MIT License</div>
-                </div>
-           </div>
-            
-            <div class="row-of-two">
-                <div class="langs">
-                    <div class="lang-label">Languages and Frameworks</div>
-                    <hr>
-                    <div class="lang-icons">
-                    </div>
-                </div>
-            
-                <div class="license" id="license-right">
-                    <img src="assets/licence.png" alt="" class="license-icon">
-                    <div class="license-label">MIT License</div>
-                </div>
+    <div class="current-page">
+        <div class="page hero-page">
+            <h1>WORK IN PROGRESS</h1>
+            <div class="dot-grid">
+                <img src="assets/components/grid.svg">
             </div>
-            <a href="https://github.com/Hugo-AOYAGI/prepa_quiz_app" class="github-icon-a">
-                <img src="assets/github-black.png" alt="" class="github-icon">
-            </a>
         </div>
+
+        <div class="page education-page">
+
+            <div class="diploma-list">
+                <span class="diploma">Labruyère Highschool<br/><i>2016 - 2019</i></span>
+                <span class="diploma">Jules Ferry Classe Préparatoire<br/><i>2019 - 2021</i></span>
+                <span class="diploma">Ecole Polytechnique<br/><i>2021 - 2025</i></span>
+                <span class="diploma">Telecom Paris<br/><i>2024 - 2026</i></span>
+            </div>
+
+            <div class="descriptions">
+                <div class="desc">Scientific cursus, graduated with <span>highest honours.</span></div>
+                <div class="desc">Broad scientific intensive training for engineering college exams, ranked <span>9th out of 2500</span> candidates for the Ecole Polytechnique.</div>
+                <div class="desc"><span>Leading engineering college</span> in France.<br/>Engineering studies specialized in machine learning, deep learning and computer vision.</div>
+                <div class="desc">Specialized masters in <span>Machine Learning and Deep Learning.</span></div>
+            </div>
+
+        </div>
+
+        <div class="page work-page">
+
+            <div class="work-list">
+                <div class="work">
+                    <div class="logo"><img src="assets/companies/armee_air.png" id="armeeair"></div>
+                    French Air Force, France
+                    <span>Software Developer Intern - 2021</span>
+                </div>
+                <div class="work">
+                    <div class="logo"><img src="assets/companies/infosys.png"></div>
+                    Infosys - EdgeVerve, India
+                    <span>Software Developer Intern - 2023</span>
+                </div>
+                <div class="work">
+                    <div class="logo"><img src="assets/companies/mocaplab.png"></div>
+                    MocapLab, France
+                    <span>AI Researcher Intern - 2024</span>
+                </div>
+            </div>
+
+            <div class="work-desc work-desc-left">
+                <div class="desc">Developed from scratch a “serious game” software to train French air force officers in decision making on the battlefield.</div>
+                <div class="desc"></div>
+                <div class="desc">Created a deep learning architecture to smoothly track eyebrow movement in motion capture videos.</div>
+            </div>
+
+            <div class="work-desc work-desc-right">
+                <div class="desc">Developed a voice operated chatbot using speech to text, speech synthesis and LLM to train custom service agents.</div>
+            </div>
+
+
+        </div>
+
+
+        <div class="page project-page">
+            
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="image-container">
+
+                    </div>
+                    <i class="fas fa-angle-double-left btn prev">⬅</i>
+                    <i class="fas fa-angle-double-right btn next">⮕</i>
+                </div>
+            </div>
         
-        <div class="sel-proj-carousel">
-            <div class="sel-proj-images-container">
-            </div>
-            <div class="sel-proj-carousel-btns">
-            </div>
-            <div class="carousel-left-arrow">
-                <img src="assets/arrow.svg" alt="" class="selectDisable">
-            </div>
-            <div class="carousel-right-arrow">
-                <img src="assets/arrow.svg" alt="" class="selectDisable">
-            </div>
         </div>
+
+        <div class="page skill-page">
+            <img class="skill-graph" src="assets/skills-graph.svg" alt="skills">
+        </div>
+
     </div>
+
+
+
+    <div class="ribbon">
+        <img src="assets/icons/scroll.svg" alt="Scroll">
+    </div>
+
+    <nav class="nav">
+        <div class="nav-titles">
+
+        </div>
+        <div class="nav-progress">
+            <div class="nav-progress-fill"></div>
+        </div>
+    </nav>
     
+
+
+    <script src="main.js"></script>
 </body>
 </html>
