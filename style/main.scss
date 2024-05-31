@@ -6,6 +6,10 @@
 @import '_projects.scss';
 @import '_skills.scss';
 
+html {
+    scroll-behavior: smooth; 
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -166,3 +170,9 @@ body {
 }
 
 
+.main-photo {
+    position: absolute;
+    width: calc(25vw + 1px);
+    top: 20vh;
+    left: 40vw;
+}

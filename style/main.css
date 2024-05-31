@@ -141,6 +141,7 @@
   position: relative;
   right: 0;
   bottom: 0;
+  background-color: rgba(124, 166, 169, 0.25);
 }
 
 .image-container {
@@ -156,25 +157,163 @@
 .btn {
   position: absolute;
   top: 50%;
-  color: white;
+  color: #222831;
   font-size: 20px;
-  opacity: 0.5;
+  opacity: 1;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-
 .btn.prev {
   left: 1em;
 }
-
 .btn.next {
   right: 1em;
 }
-
 .btn:hover {
+  opacity: 0.5;
+}
+
+.info-ribbon {
+  position: absolute;
+  left: 5vw;
+  width: 25vw;
+  height: 100%;
+  color: #222831;
+}
+
+.title-carousel-btns {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2em;
+  padding-right: 2em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.title-carousel-btns button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-size: 1.25em;
+  cursor: pointer;
+  z-index: 10;
+  color: #222831;
+  transition: color 0.3s;
+}
+.title-carousel-btns button:hover {
+  color: rgba(34, 40, 49, 0.5);
+}
+
+.title-carousel {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  align-items: center;
+}
+.title-carousel .title {
+  font-size: 1em;
+  margin: 0.25em;
+  text-transform: uppercase;
+  height: -moz-fit-content;
+  height: fit-content;
+  transition: margin-left 0.3s, left 0.3s;
+  z-index: 10;
+  opacity: 0.25;
+}
+.title-carousel .title.selected {
   opacity: 1;
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+.tag-box {
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
+  padding-left: 0.5em;
+  border-left: 2px solid #222831;
+}
+.tag-box img {
+  width: 1.25em;
+  height: 1.25em;
+  margin-right: 0.25em;
+}
+.tag-box .type-row {
+  display: flex;
+  align-items: center;
+}
+.tag-box .lang-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.25em;
+}
+.tag-box .lang-row .lang {
+  display: flex;
+  align-items: center;
+  margin-right: 1.25em;
+}
+.tag-box .lang-row .lang:last-child {
+  margin-right: 0em;
+}
+
+.check-it {
+  margin-top: 1.25em;
+  margin-left: 1em;
+  display: flex;
+  align-items: center;
+}
+.check-it a {
+  color: #222831;
+}
+.check-it img {
+  width: 1.25em;
+  height: 1.25em;
+  margin-right: 0.25em;
+}
+
+.project-desc {
+  margin: 2em;
+  padding-right: 1em;
+}
+
+.info-ribbon-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.project {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s;
+  left: 100%;
+}
+.project.selected {
+  left: 0;
+}
+.project.passed {
+  left: -100%;
+}
+
+.titles-wrap {
+  position: absolute;
+  width: 100%;
+  top: 15%;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 25%;
+  top: 0;
+}
+.thumbnail img {
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+          mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
 
 .skill-graph {
@@ -182,6 +321,10 @@
   height: 85%;
   left: 20%;
   margin-top: 2.5%;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -309,4 +452,11 @@ body {
   height: 0%;
   width: 100%;
   background-color: #7CA6A9;
+}
+
+.main-photo {
+  position: absolute;
+  width: calc(25vw + 1px);
+  top: 20vh;
+  left: 40vw;
 }/*# sourceMappingURL=main.css.map */

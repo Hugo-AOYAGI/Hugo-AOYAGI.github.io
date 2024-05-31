@@ -17,6 +17,87 @@ let scrolling = 0
 let currentImg = 1;
 let timeout;
 
+let currentProject = 0;
+
+let scrollTimeout;
+
+let pageChanging = false;
+
+
+let projects = [
+    {
+        "title": "Les Taupins",
+        "id": "taupins",
+        "description": "An application I built during “classes préparatoires” to assist myself and my classmates to train for exams through simple quizzes which cover various scientific subjects.",
+        "images": ["1.png", "2.png", "3.png"],
+        "type": "mobile",
+        "techs": [["flutter", "Flutter"], ["js", "JavaScript (Backend)"]],
+        "link": "https://github.com/Hugo-AOYAGI/prepa_quiz_app",
+        "thumbnail": "taupins.png"
+    },
+    {
+        "title": "Formula Checker",
+        "id": "formula-checker",
+        "description": "This website allows you to type any formula you wish, specify the dimension of every variable and checks you are not adding length and time for instance.",
+        "images": ["1.png", "2.png", "3.png"],
+        "type": "web",
+        "techs": [["react", "React"], ["js", "JavaScript"]],
+        "link": "https://github.com/Hugo-AOYAGI/formula-checker",
+        "thumbnail": "formula_checker.png"
+    },
+    {
+        "title": "Tkinter UI Maker",
+        "id": "ui-maker",
+        "description": "A tkinter app where you can place widgets on the screen and change all of their properties, then let the program write the code for it with the click of a button.",
+        "images": ["1.png", "2.png"],
+        "type": "desktop",
+        "techs": [["python", "Python & Tkinter"]],
+        "link": "https://github.com/Hugo-AOYAGI/Python-Tkinter-UI-Maker",
+        "thumbnail": "ui_maker.png"
+    }
+
+] 
+
+const TYPE_STRINGS = {"mobile": "Mobile Application", "web": "Web Application", "desktop": "Desktop Application"} 
+
+
+
+let projectTemplate = (project) => {
+    return `
+        <div class="project" id="${project.id}">
+            <div class="thumbnail">
+                <img src="assets/thumbnails/${project.thumbnail}" alt="">
+            </div>
+                
+            <div class="tag-box">
+                <div class="type-row">
+                    <img src="assets/types/${project.type}.svg">
+                    ${TYPE_STRINGS[project.type]}
+                </div>
+                <div class="lang-row">
+                    ${
+                        project.techs.map(tech => {
+                            return `<div class="lang">
+                                <img src="assets/langs/${tech[0]}.svg">
+                                <span>${tech[1]}</span>
+                            </div>`
+                        }).join("")
+                    }
+                </div>
+            </div>
+
+            <div class="check-it">
+                <img src="assets/icons/github.svg" alt="">
+                <a href="${project.link}">Check it out !</a>
+            </div>
+
+            <div class="project-desc">
+                ${project.description}
+            </div>
+        </div> 
+    `
+}
+
 let setup = () => {
 
     console.log("Setting up Website...")
@@ -160,21 +241,97 @@ let setup = () => {
 
     $(document).on('wheel', function(event) {
         // Check if the user is scrolling
+        console.log("a")
+
+        if (pageChanging) {
+            return;
+        }
+
         if (event.originalEvent.deltaY > 0) {
             scrolling += 100;
         }
 
-        if (scrolling > 400) {
+        if (scrolling > 200) {
             changePage();
+            pageChanging = true;
+            clearTimeout(scrollTimeout);
             scrolling = 0;
+            setTimeout(() => {
+                pageChanging = false;
+            }, 1000)
         } else {
             teasePage();
         }
 
-        setTimeout(() => {
+        scrollTimeout = setTimeout(() => {
             scrolling = 0;
         }, 300)
     });
+
+    
+
+    let setupProjects = () => {
+        let projects_info = $(".info-ribbon-wrap");
+        let titles = $(".title-carousel");
+
+        projects.forEach(project => {
+            projects_info.append(projectTemplate(project));
+            titles.append(`<div class="title" id="${project.id}-title">${project.title}</div>`);
+        })
+
+        $(`#${projects[0].id}`).addClass("selected");
+        $(`#${projects[0].id}-title`).addClass("selected");
+
+        setTitlePosition(0)
+
+
+    }
+
+    let setTitlePosition = (i) => {
+
+        width_before = 0;
+        for (let j = 0; j < i; j++) {
+            width_before += $(`#${projects[j].id}-title`).width();
+        }
+        width = $(`#${projects[i].id}-title`).width();
+
+        $(`#${projects[0].id}-title`).css("margin-left", `calc(50% - ${width_before + width / 2}px)`)
+
+    }
+
+    $(".title-next").on("click", () => {
+        if (currentProject >= projects.length - 1) {
+            return;
+        } 
+        currentProject++;
+        $(`#${projects[currentProject - 1].id}`).removeClass("selected").addClass("passed");
+        $(`#${projects[currentProject].id}`).addClass("selected");
+
+        $(`#${projects[currentProject - 1].id}-title`).removeClass("selected");	
+        $(`#${projects[currentProject].id}-title`).addClass("selected");
+
+        setTitlePosition(currentProject)
+
+    });
+
+    $(".title-prev").on("click", () => {
+        if (currentProject <= 0) {
+            return;
+        } 
+        currentProject--;
+        $(`#${projects[currentProject + 1].id}`).removeClass("selected");
+        $(`#${projects[currentProject].id}`).removeClass("passed").addClass("selected");
+
+        $(`#${projects[currentProject + 1].id}-title`).removeClass("selected");	
+        $(`#${projects[currentProject].id}-title`).addClass("selected");
+
+        setTitlePosition(currentProject)
+
+    });
+
+
+    setupProjects();
+
 
     // changePage();
     // changePage();
